@@ -27,7 +27,7 @@ class _EditNameDialogState extends ConsumerState<EditNameDialog> {
   static const _blockedWords = [
     'admin',
     'moderator',
-    'zippath',
+    'zlynkr',
     'support',
   ];
 

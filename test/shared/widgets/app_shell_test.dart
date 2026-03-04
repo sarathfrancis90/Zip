@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
-import 'package:zippath/core/constants/app_strings.dart';
-import 'package:zippath/core/theme/app_theme.dart';
+import 'package:zlynkr/core/constants/app_strings.dart';
+import 'package:zlynkr/core/theme/app_theme.dart';
 
 void main() {
   group('AppShell (BottomNavigationBar)', () {

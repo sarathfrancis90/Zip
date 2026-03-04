@@ -284,12 +284,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                   child: Text('System'),
                 ),
                 DropdownMenuItem(
-                  value: ThemeMode.light,
-                  child: Text('Light'),
-                ),
-                DropdownMenuItem(
                   value: ThemeMode.dark,
                   child: Text('Dark'),
+                ),
+                DropdownMenuItem(
+                  value: ThemeMode.light,
+                  child: Text('Light'),
                 ),
               ],
             ),
@@ -450,9 +450,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   void _showAboutDialog(BuildContext context) {
     showAboutDialog(
       context: context,
-      applicationName: 'ZipPath',
+      applicationName: 'Zlynkr',
       applicationVersion: '1.0.0',
-      applicationLegalese: 'Copyright 2024 ZipPath. All rights reserved.',
+      applicationLegalese: 'Copyright 2026 Zlynkr. All rights reserved.',
       applicationIcon: Container(
         width: 48,
         height: 48,

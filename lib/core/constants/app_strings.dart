@@ -1,6 +1,6 @@
 abstract final class AppStrings {
-  static const appName = 'ZipPath';
-  static const appTagline = 'Daily Path Puzzle';
+  static const appName = 'Zlynkr';
+  static const appTagline = 'Feed the Path';
 
   // Navigation
   static const navHome = 'Home';
@@ -55,8 +55,8 @@ abstract final class AppStrings {
   static const streakFreeze = 'Streak Freeze';
 
   // Share
-  static const shareTitle = 'ZipPath';
-  static const shareMessage = 'I solved today\'s ZipPath in';
+  static const shareTitle = 'Zlynkr';
+  static const shareMessage = 'I solved today\'s Zlynkr in';
 
   // Errors
   static const errorGeneric = 'Something went wrong. Please try again.';

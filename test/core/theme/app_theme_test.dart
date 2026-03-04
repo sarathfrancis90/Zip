@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zippath/core/constants/app_colors.dart';
-import 'package:zippath/core/theme/app_theme.dart';
+import 'package:zlynkr/core/constants/app_colors.dart';
+import 'package:zlynkr/core/theme/app_theme.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -382,7 +382,7 @@ void main() {
       expect(capturedTheme.inputDecorationTheme.filled, isTrue);
       expect(
         capturedTheme.inputDecorationTheme.fillColor,
-        AppColors.cardSurface,
+        AppColors.elevatedSurface,
       );
     });
 

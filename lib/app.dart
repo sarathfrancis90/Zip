@@ -6,8 +6,8 @@ import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_provider.dart';
 
-class ZipPathApp extends ConsumerWidget {
-  const ZipPathApp({super.key});
+class ZlynkrApp extends ConsumerWidget {
+  const ZlynkrApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -15,7 +15,7 @@ class ZipPathApp extends ConsumerWidget {
     final themeMode = ref.watch(themeModeNotifierProvider);
 
     return MaterialApp.router(
-      title: 'ZipPath',
+      title: 'Zlynkr',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

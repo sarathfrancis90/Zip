@@ -1,6 +1,6 @@
-# zippath
+# Zlynkr
 
-ZipPath - Daily Hamiltonian Path Puzzle Game
+Zlynkr — Feed the Path. A daily snake puzzle game.
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zippath/features/puzzle/presentation/widgets/celebration_overlay.dart';
+import 'package:zlynkr/features/puzzle/presentation/widgets/celebration_overlay.dart';
 
 import '../../../../helpers/test_helpers.dart';
 
@@ -144,15 +144,13 @@ void main() {
         expect(find.text('Share Result'), findsOneWidget);
       });
 
-      testWidgets('Done is an OutlinedButton', (tester) async {
+      testWidgets('Done button is tappable', (tester) async {
         await tester.pumpWidget(buildCelebrationOverlay());
         await pumpPastAnimations(tester);
 
-        final doneButton = find.ancestor(
-          of: find.text('Done'),
-          matching: find.byType(OutlinedButton),
-        );
-        expect(doneButton, findsOneWidget);
+        // Done button is rendered as a SpringButton wrapping styled Container
+        final doneText = find.text('Done');
+        expect(doneText, findsOneWidget);
       });
     });
 

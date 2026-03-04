@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zippath/core/constants/app_strings.dart';
-import 'package:zippath/features/home/presentation/home_screen.dart';
-import 'package:zippath/features/puzzle/domain/models/puzzle.dart';
-import 'package:zippath/features/puzzle/providers/daily_puzzle_provider.dart';
+import 'package:zlynkr/core/constants/app_strings.dart';
+import 'package:zlynkr/features/home/presentation/home_screen.dart';
+import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
+import 'package:zlynkr/features/puzzle/providers/daily_puzzle_provider.dart';
 
 import '../../../helpers/test_helpers.dart';
 
@@ -29,7 +29,7 @@ void main() {
     }
 
     group('Header content', () {
-      testWidgets('shows app name "ZipPath"', (tester) async {
+      testWidgets('shows app name "Zlynkr"', (tester) async {
         await tester.pumpWidget(buildHomeScreen());
         await tester.pumpAndSettle();
 

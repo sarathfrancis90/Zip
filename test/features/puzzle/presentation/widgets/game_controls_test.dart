@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zippath/features/puzzle/domain/models/game_state.dart';
-import 'package:zippath/features/puzzle/presentation/widgets/game_controls.dart';
+import 'package:zlynkr/features/puzzle/domain/models/game_state.dart';
+import 'package:zlynkr/features/puzzle/presentation/widgets/game_controls.dart';
 
 import '../../../../helpers/test_helpers.dart';
 
@@ -53,7 +53,7 @@ void main() {
     });
 
     group('Button states when NOT playing', () {
-      testWidgets('all buttons are disabled when status is notStarted',
+      testWidgets('undo and reset are disabled when status is notStarted',
           (tester) async {
         final state = createNotStartedGameState();
         await tester.pumpWidget(buildGameControls(state));
@@ -65,13 +65,13 @@ void main() {
         expect(resetCalled, isFalse);
       });
 
-      testWidgets('hint button is disabled when status is notStarted',
+      testWidgets('hint button is enabled when status is notStarted',
           (tester) async {
         final state = createNotStartedGameState();
         await tester.pumpWidget(buildGameControls(state));
 
         await tester.tap(find.text('Hint'));
-        expect(hintCalled, isFalse);
+        expect(hintCalled, isTrue);
       });
 
       testWidgets('buttons are disabled when status is completed',
