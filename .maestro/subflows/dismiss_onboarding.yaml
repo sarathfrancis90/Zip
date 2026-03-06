@@ -1,0 +1,9 @@
+# Reusable subflow: Skip onboarding if it appears
+appId: com.zlynkr.zlynkr
+
+---
+
+- tapOn:
+    text: "Skip"
+    optional: true
+- waitForAnimationToEnd
