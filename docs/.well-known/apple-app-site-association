@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.zlynkr.zlynkr",
+        "paths": ["/join/*", "/puzzle/*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TEAMID.com.zlynkr.zlynkr"]
+  }
+}
