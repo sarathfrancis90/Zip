@@ -20,18 +20,18 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
-import 'package:zlynker/core/constants/app_colors.dart';
-import 'package:zlynker/core/constants/app_sizes.dart';
-import 'package:zlynker/core/theme/app_theme.dart';
-import 'package:zlynker/features/auth/presentation/onboarding_screen.dart';
-import 'package:zlynker/features/home/presentation/home_screen.dart';
-import 'package:zlynker/features/puzzle/domain/game_engine.dart';
-import 'package:zlynker/features/puzzle/domain/models/game_state.dart';
-import 'package:zlynker/features/puzzle/domain/models/puzzle.dart';
-import 'package:zlynker/features/puzzle/presentation/widgets/celebration_overlay.dart';
-import 'package:zlynker/features/puzzle/presentation/widgets/game_controls.dart';
-import 'package:zlynker/features/puzzle/presentation/widgets/puzzle_grid.dart';
-import 'package:zlynker/features/stats/presentation/stats_screen.dart';
+import 'package:zlynkr/core/constants/app_colors.dart';
+import 'package:zlynkr/core/constants/app_sizes.dart';
+import 'package:zlynkr/core/theme/app_theme.dart';
+import 'package:zlynkr/features/auth/presentation/onboarding_screen.dart';
+import 'package:zlynkr/features/home/presentation/home_screen.dart';
+import 'package:zlynkr/features/puzzle/domain/game_engine.dart';
+import 'package:zlynkr/features/puzzle/domain/models/game_state.dart';
+import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
+import 'package:zlynkr/features/puzzle/presentation/widgets/celebration_overlay.dart';
+import 'package:zlynkr/features/puzzle/presentation/widgets/game_controls.dart';
+import 'package:zlynkr/features/puzzle/presentation/widgets/puzzle_grid.dart';
+import 'package:zlynkr/features/stats/presentation/stats_screen.dart';
 // NOTE: GroupsScreen, ProfileScreen, AuthScreen require Supabase and are
 // tested via the running app, not in this isolated audit.
 
