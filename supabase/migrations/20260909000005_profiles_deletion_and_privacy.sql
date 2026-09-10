@@ -30,7 +30,7 @@ AS $$
 BEGIN
   -- SECURITY DEFINER RPCs (request/cancel deletion) set this transaction-local
   -- flag so they can write the guarded columns on the caller's behalf.
-  IF current_setting('zlynkr.profile_guard_bypass', true) = 'on' THEN
+  IF current_setting('icos.profile_guard_bypass', true) = 'on' THEN
     RETURN NEW;
   END IF;
   -- PostgREST exposes the JWT as request.jwt.claims (JSON). Treat anything that is
@@ -163,7 +163,7 @@ BEGIN
     RAISE EXCEPTION 'Not authenticated' USING ERRCODE = '42501';
   END IF;
 
-  PERFORM set_config('zlynkr.profile_guard_bypass', 'on', true);
+  PERFORM set_config('icos.profile_guard_bypass', 'on', true);
   UPDATE public.profiles
      SET deleted_at = COALESCE(deleted_at, now())
    WHERE id = v_uid AND purged_at IS NULL
@@ -190,7 +190,7 @@ BEGIN
     RAISE EXCEPTION 'Not authenticated' USING ERRCODE = '42501';
   END IF;
 
-  PERFORM set_config('zlynkr.profile_guard_bypass', 'on', true);
+  PERFORM set_config('icos.profile_guard_bypass', 'on', true);
   UPDATE public.profiles
      SET deleted_at = NULL
    WHERE id = v_uid AND purged_at IS NULL

@@ -45,10 +45,10 @@ CATEGORY: Puzzle
 CONTENT RATING: Everyone
 
 PRIVACY POLICY URL:
-https://sarathfrancis90.github.io/zlynkr/privacy-policy.html
+https://icos.app/privacy-policy.html
 
 WEBSITE:
-https://sarathfrancis90.github.io/zlynkr/
+https://icos.app/
 
 CONTACT EMAIL:
 sarathfrancis90@gmail.com

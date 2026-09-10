@@ -21,7 +21,7 @@ inputDocuments:
   - PLAN.md
 ---
 
-# UX Design Specification -- ZipPath
+# UX Design Specification -- Icos
 
 **Author:** Sarathfrancis
 **Date:** 2026-03-02
@@ -32,11 +32,11 @@ inputDocuments:
 
 ### Project Vision
 
-ZipPath is a cross-platform mobile puzzle game (iOS and Android, built with Flutter) where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. One puzzle is released daily for all users worldwide, with difficulty scaling from Monday (easy, 5x5 grid) to Sunday (hard, 8x8 grid).
+Icos is a cross-platform mobile puzzle game (iOS and Android, built with Flutter) where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. One puzzle is released daily for all users worldwide, with difficulty scaling from Monday (easy, 5x5 grid) to Sunday (hard, 8x8 grid).
 
 The UX vision centers on delivering a **polished, delightful core loop** -- solve the daily puzzle, see your ranking in your groups, share your result -- that feels as satisfying as the best casual games while being wrapped in a social layer that transforms solo puzzling into a shared daily ritual.
 
-ZipPath addresses a gap in the daily puzzle market: no standalone app combines a compelling Hamiltonian path mechanic with private group leaderboards, offline-first play, and spoiler-free social sharing. The UX must make all of this feel effortless from the very first second.
+Icos addresses a gap in the daily puzzle market: no standalone app combines a compelling Hamiltonian path mechanic with private group leaderboards, offline-first play, and spoiler-free social sharing. The UX must make all of this feel effortless from the very first second.
 
 ### Target Users
 
@@ -80,15 +80,15 @@ People who receive a share card or group invite and try the game for the first t
 
 ### Defining Experience
 
-ZipPath's defining experience is: **"Draw a path through the grid, connecting the numbers, filling every cell."**
+Icos's defining experience is: **"Draw a path through the grid, connecting the numbers, filling every cell."**
 
-This is the Tinder-swipe-equivalent for ZipPath -- the core interaction that players will describe to friends and that must feel perfect. The finger-on-glass path drawing, with its smooth blue trail, haptic pulses at each waypoint, and satisfying grid-fill completion, is the entire product in one gesture.
+This is the Tinder-swipe-equivalent for Icos -- the core interaction that players will describe to friends and that must feel perfect. The finger-on-glass path drawing, with its smooth blue trail, haptic pulses at each waypoint, and satisfying grid-fill completion, is the entire product in one gesture.
 
 If path drawing feels fluid, responsive, and tactile, everything else follows. If it stutters, lags, or feels imprecise, nothing else matters.
 
 ### User Mental Model
 
-Players approach ZipPath with mental models drawn from:
+Players approach Icos with mental models drawn from:
 - **Maze/path puzzles** -- The concept of drawing a continuous route is intuitive to anyone who has done a maze
 - **Wordle/daily puzzle games** -- The "one puzzle per day, same for everyone" ritual is now a well-established pattern
 - **Touch-based drawing** -- The expectation is immediate, direct manipulation: where my finger goes, the path follows
@@ -113,7 +113,7 @@ Where users may get confused:
 
 ### Novel UX Patterns
 
-ZipPath combines established patterns in a novel way:
+Icos combines established patterns in a novel way:
 
 **Established patterns adopted:**
 - Bottom tab navigation (Home, Groups, Stats, Profile)
@@ -232,21 +232,21 @@ Daily ritual comfort -> Mastery feeling (improving times) -> Social belonging (g
 
 **1. Wordle (NYT)**
 - **What it does well:** One puzzle per day creates scarcity and ritual. The share grid (colored squares) went viral because it conveys results without spoilers. The interface is brutally simple: type a word, see colors.
-- **Key UX lesson for ZipPath:** Constrain the experience to create habit. The daily limit is a feature, not a limitation. The share card format must be similarly iconic and non-spoiling.
+- **Key UX lesson for Icos:** Constrain the experience to create habit. The daily limit is a feature, not a limitation. The share card format must be similarly iconic and non-spoiling.
 - **What it lacks:** No group leaderboards, no private competition, no streaks with freeze protection. The social layer is external (screenshots in group chats).
 
 **2. LinkedIn Zip**
 - **What it does well:** Proved the Hamiltonian path mechanic works on mobile. Smooth path drawing. Clean grid presentation. Daily puzzle cadence.
-- **Key UX lesson for ZipPath:** The core mechanic is validated. Players understand and enjoy drawing paths through numbered waypoints. Grid visualization with numbered circles and walls works.
+- **Key UX lesson for Icos:** The core mechanic is validated. Players understand and enjoy drawing paths through numbered waypoints. Grid visualization with numbered circles and walls works.
 - **What it lacks:** Locked inside LinkedIn. No group leaderboards. No offline play. No dedicated social features. Limited statistics. No spoiler-free sharing.
 
 **3. Duolingo**
 - **What it does well:** Streak mechanic with freeze protection drives daily retention. The streak freeze is a psychological safety net that reduces streak anxiety. Celebration animations are generous and motivating. The notifications are persistent but effective ("Duo is sad").
-- **Key UX lesson for ZipPath:** Streak freeze is essential for retention. Celebration should be immediate and enthusiastic. Progress visualization (streak counter, daily tracker) should be prominent on the home screen.
+- **Key UX lesson for Icos:** Streak freeze is essential for retention. Celebration should be immediate and enthusiastic. Progress visualization (streak counter, daily tracker) should be prominent on the home screen.
 
 **4. Strava (Social Fitness)**
 - **What it does well:** Private groups with activity feeds and leaderboards. The "Segment Leaderboard" pattern where everyone competes on the same route maps perfectly to "same puzzle, different solve times." Social comparison is motivating without being toxic because the groups are private and self-selected.
-- **Key UX lesson for ZipPath:** Private group leaderboards work best when groups are self-organized. The group invite flow must be frictionless (link + code). Leaderboard display should highlight personal position clearly.
+- **Key UX lesson for Icos:** Private group leaderboards work best when groups are self-organized. The group invite flow must be frictionless (link + code). Leaderboard display should highlight personal position clearly.
 
 ### Transferable UX Patterns
 
@@ -261,7 +261,7 @@ Daily ritual comfort -> Mastery feeling (improving times) -> Social belonging (g
 
 **Feedback Patterns:**
 - **Haptic vocabulary** (Apple system haptics) -- Light/medium/heavy/error patterns create an invisible language. Cell entry = light, waypoint = medium, wall = error, completion = success.
-- **Wordle share grid** -- Abstract visual that communicates result without revealing solution. ZipPath's version shows a grid silhouette with colored blocks representing the general path shape.
+- **Wordle share grid** -- Abstract visual that communicates result without revealing solution. Icos's version shows a grid silhouette with colored blocks representing the general path shape.
 
 **Emotional Patterns:**
 - **Duolingo streak flame** -- Prominent streak counter with fire/flame icon on the home screen. Visual urgency when streak is at risk.
@@ -269,7 +269,7 @@ Daily ritual comfort -> Mastery feeling (improving times) -> Social belonging (g
 
 ### Anti-Patterns to Avoid
 
-1. **Interstitial ads between puzzles** -- Breaks flow state and cheapens the experience. ZipPath is ad-free.
+1. **Interstitial ads between puzzles** -- Breaks flow state and cheapens the experience. Icos is ad-free.
 2. **Mandatory tutorial before first play** -- Creates friction at the highest-intent moment. Players should play immediately; progressive hints can teach.
 3. **Visible countdown timer during play** -- Creates anxiety and discourages exploration. Time is tracked silently and revealed on completion.
 4. **Forced social login** -- Anonymous play must be the default. Account creation should be prompted gently (after 3rd solve or group join attempt), never required.
@@ -286,10 +286,10 @@ Daily ritual comfort -> Mastery feeling (improving times) -> Social belonging (g
 - Native share sheet for result sharing
 - Pull-to-refresh for leaderboard data
 
-**Adapt for ZipPath:**
-- Wordle share grid -> ZipPath share card with abstract path visualization + time + grid size
-- Duolingo streak freeze -> ZipPath streak freeze with 1/week auto-application
-- Strava segment leaderboard -> ZipPath group daily/weekly leaderboard with solved/unsolved member states
+**Adapt for Icos:**
+- Wordle share grid -> Icos share card with abstract path visualization + time + grid size
+- Duolingo streak freeze -> Icos streak freeze with 1/week auto-application
+- Strava segment leaderboard -> Icos group daily/weekly leaderboard with solved/unsolved member states
 - LinkedIn Zip grid rendering -> Enhanced with glow trail, haptic vocabulary, wall collision feedback
 
 **Avoid entirely:**
@@ -303,24 +303,24 @@ Daily ritual comfort -> Mastery feeling (improving times) -> Social belonging (g
 
 ### Design System Choice
 
-ZipPath uses a **custom design system built on Flutter's Material 3 foundation**, themed with a custom visual identity. This is a hybrid approach:
+Icos uses a **custom design system built on Flutter's Material 3 foundation**, themed with a custom visual identity. This is a hybrid approach:
 
 - **Foundation:** Flutter's Material 3 widgets provide the structural foundation (AppBar, BottomNavigationBar, Card, ListTile, Dialog, SnackBar, etc.) with built-in accessibility, gesture handling, and platform adaptation.
 - **Custom layer:** The puzzle grid, path drawing, celebration animations, share card renderer, and leaderboard components are fully custom (built with CustomPainter + Canvas API).
-- **Theming:** Material 3's dynamic theming system is used to apply ZipPath's custom color palette, typography, and shape system globally.
+- **Theming:** Material 3's dynamic theming system is used to apply Icos's custom color palette, typography, and shape system globally.
 
 ### Rationale for Selection
 
 1. **Flutter-native:** Material 3 is Flutter's first-class design system with deep integration. Using it eliminates fighting the framework.
 2. **Accessibility built in:** Material 3 widgets include proper semantics, touch targets (48dp default), and high contrast support out of the box.
 3. **Custom where it matters:** The puzzle engine (grid, path, animations) requires custom rendering that no design system provides. Material 3 handles everything around the puzzle (navigation, settings, lists, dialogs) while the game canvas is fully custom.
-4. **Theming flexibility:** Material 3's ColorScheme, TextTheme, and ShapeTheme systems allow ZipPath's unique visual identity to be applied consistently across all Material widgets.
+4. **Theming flexibility:** Material 3's ColorScheme, TextTheme, and ShapeTheme systems allow Icos's unique visual identity to be applied consistently across all Material widgets.
 5. **Single developer efficiency:** As a solo developer project, leveraging proven Material 3 components for standard UI reduces development time while focusing custom effort on the core gameplay experience.
 
 ### Implementation Approach
 
-- Use `ThemeData` with custom `ColorScheme` to apply ZipPath colors globally
-- Create a `ZipPathTheme` extension for game-specific tokens (grid colors, path glow, waypoint accent, wall color)
+- Use `ThemeData` with custom `ColorScheme` to apply Icos colors globally
+- Create a `IcosTheme` extension for game-specific tokens (grid colors, path glow, waypoint accent, wall color)
 - Build puzzle-specific widgets (grid, path canvas, result card, share card) as custom Flutter widgets using `CustomPainter`
 - Use Material 3 widgets for all non-game UI: navigation, settings, dialogs, lists, forms
 - Implement dark mode and light mode as complete `ThemeData` variants with mode-specific game canvas colors
@@ -346,7 +346,7 @@ The customization strategy separates concerns:
 
 This single sentence encapsulates the entire product. The defining interaction is the moment a player's finger touches the grid and begins drawing: the smooth blue trail follows their finger, cells fill in sequence, haptic taps pulse rhythmically, and the grid gradually transforms from empty to solved.
 
-Like Tinder's swipe or Instagram's double-tap, ZipPath's path drawing must feel iconic -- recognizable, satisfying, and effortless. This is what players will describe to friends: "You draw a path through a grid and connect the numbers."
+Like Tinder's swipe or Instagram's double-tap, Icos's path drawing must feel iconic -- recognizable, satisfying, and effortless. This is what players will describe to friends: "You draw a path through a grid and connect the numbers."
 
 ### 2.2 User Mental Model
 
@@ -375,7 +375,7 @@ The core experience succeeds when:
 ### 2.4 Novel UX Patterns
 
 **Path drawing with integrated undo:**
-Unlike typical puzzle games where undo is a separate button action, ZipPath's primary undo mechanism is dragging backward along the drawn path. The path visually erases in reverse as the finger retraces. This is novel because it keeps the player in the direct manipulation mental model -- the same gesture (dragging) both creates and destroys the path.
+Unlike typical puzzle games where undo is a separate button action, Icos's primary undo mechanism is dragging backward along the drawn path. The path visually erases in reverse as the finger retraces. This is novel because it keeps the player in the direct manipulation mental model -- the same gesture (dragging) both creates and destroys the path.
 
 **Hidden timer with post-reveal:**
 The timer runs silently during play and is only revealed on completion. This is intentionally counter to most puzzle games that show a running timer. The design rationale: a visible timer creates performance anxiety that conflicts with the flow state we want during solving. The time reveal on completion creates a surprise moment ("Oh, that was fast!") rather than mounting pressure.
@@ -594,7 +594,7 @@ Content area:         Full remaining height between toolbar and nav/action bar
 
 ### Design Directions Explored
 
-The design direction for ZipPath follows a **"Dark Immersive Game" aesthetic** -- a deep navy background that makes the electric blue path and coral-orange waypoints pop with vibrant contrast. This is the visual language established in the PLAN.md design system and informed by the product brief's positioning as a "premium mobile puzzle game."
+The design direction for Icos follows a **"Dark Immersive Game" aesthetic** -- a deep navy background that makes the electric blue path and coral-orange waypoints pop with vibrant contrast. This is the visual language established in the PLAN.md design system and informed by the product brief's positioning as a "premium mobile puzzle game."
 
 Six directions were considered:
 
@@ -649,7 +649,7 @@ Light mode is provided as a full alternative for accessibility and user preferen
 
 ### Journey 1: First-Time User Discovery & First Solve
 
-**Entry:** User taps App Store link from a share card or group invite, downloads and opens ZipPath.
+**Entry:** User taps App Store link from a share card or group invite, downloads and opens Icos.
 
 ```mermaid
 flowchart TD
@@ -831,7 +831,7 @@ The result screen is the critical conversion point for social engagement. Group 
 
 **From Material 3 (used directly or themed):**
 
-| Component | Usage in ZipPath |
+| Component | Usage in Icos |
 |-----------|-----------------|
 | `BottomNavigationBar` | 4-tab navigation: Home, Groups, Stats, Profile |
 | `AppBar` / `SliverAppBar` | Screen titles, back navigation, action buttons |
@@ -933,8 +933,8 @@ The result screen is the critical conversion point for social engagement. Group 
 #### ShareCard
 
 **Purpose:** Generates a spoiler-free image for sharing puzzle results.
-**Content:** ZipPath logo, day identifier ("Wednesday, March 2"), grid size ("6x6"), abstract path visualization (colored blocks showing general path direction without exact solution), solve time, "Can you beat my time?" call to action.
-**Visual:** Dark background card (280x380px) with the ZipPath color palette. Grid silhouette with colored blocks. Bold monospace time. Share-friendly aspect ratio.
+**Content:** Icos logo, day identifier ("Wednesday, March 2"), grid size ("6x6"), abstract path visualization (colored blocks showing general path direction without exact solution), solve time, "Can you beat my time?" call to action.
+**Visual:** Dark background card (280x380px) with the Icos color palette. Grid silhouette with colored blocks. Bold monospace time. Share-friendly aspect ratio.
 **Generation:** Rendered in Flutter using `RepaintBoundary` + `toImage()` method. Cached for repeated sharing.
 
 #### GroupInviteCard
@@ -1146,7 +1146,7 @@ The result screen is the critical conversion point for social engagement. Group 
 
 ### Responsive Strategy
 
-ZipPath is a **mobile-first application** targeting iOS and Android phones as the primary platform. Tablet support is a secondary consideration.
+Icos is a **mobile-first application** targeting iOS and Android phones as the primary platform. Tablet support is a secondary consideration.
 
 **Phone Strategy (Primary):**
 - Portrait orientation is the primary layout. Landscape is NOT supported for puzzle play (grid aspect ratio is designed for portrait).
@@ -1171,7 +1171,7 @@ ZipPath is a **mobile-first application** targeting iOS and Android phones as th
 
 ### Breakpoint Strategy
 
-Since ZipPath is a native mobile app (not web), traditional CSS breakpoints do not apply. Instead, the app uses Flutter's `MediaQuery` and `LayoutBuilder` for adaptive layout:
+Since Icos is a native mobile app (not web), traditional CSS breakpoints do not apply. Instead, the app uses Flutter's `MediaQuery` and `LayoutBuilder` for adaptive layout:
 
 ```
 ADAPTIVE BREAKPOINTS
@@ -1202,7 +1202,7 @@ Tablet:      width >= 768dp   -- iPad, Android tablets
 
 **Target Compliance: WCAG 2.1 AA**
 
-ZipPath targets WCAG 2.1 Level AA compliance, with Level AAA compliance for color contrast (many elements already exceed AAA ratios).
+Icos targets WCAG 2.1 Level AA compliance, with Level AAA compliance for color contrast (many elements already exceed AAA ratios).
 
 **Color & Visual Accessibility:**
 

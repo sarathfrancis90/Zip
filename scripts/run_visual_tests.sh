@@ -15,7 +15,7 @@ set -euo pipefail
 PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$PROJECT_DIR"
 
-SCREENSHOT_DIR="/tmp/zippath_visual_test"
+SCREENSHOT_DIR="/tmp/icos_visual_test"
 mkdir -p "$SCREENSHOT_DIR"
 
 MODE="${1:-full}"

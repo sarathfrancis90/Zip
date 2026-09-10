@@ -30,18 +30,18 @@ documentCounts:
 workflowType: prd
 ---
 
-# Product Requirements Document - ZipPath
+# Product Requirements Document - Icos
 
 **Author:** Sarathfrancis
 **Date:** 2026-03-02
 
 ## Executive Summary
 
-ZipPath is a cross-platform mobile puzzle game (iOS and Android) where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. One puzzle is released daily for all users, with difficulty scaling from Monday (easy, 5x5) to Sunday (hard, 8x8).
+Icos is a cross-platform mobile puzzle game (iOS and Android) where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. One puzzle is released daily for all users, with difficulty scaling from Monday (easy, 5x5) to Sunday (hard, 8x8).
 
 The product addresses a gap in the daily puzzle market: no standalone app combines a compelling Hamiltonian path mechanic with private group leaderboards, offline-first play, and spoiler-free social sharing. LinkedIn's Zip popularized the mechanic but remains locked inside the LinkedIn platform with no social competition features. Wordle and NYT Games drive daily habits but lack real-time group leaderboards. Generic puzzle apps are ad-heavy with poor social features.
 
-ZipPath targets 22-45 year old professionals who already play daily puzzles (Wordle, NYT Connections, LinkedIn Zip) and want a shared competitive experience with friends and coworkers.
+Icos targets 22-45 year old professionals who already play daily puzzles (Wordle, NYT Connections, LinkedIn Zip) and want a shared competitive experience with friends and coworkers.
 
 ### What Makes This Special
 
@@ -155,7 +155,7 @@ Core puzzle gameplay + daily puzzle system + groups with leaderboards + offline 
 - Offline sync conflicts → mitigated by simple conflict resolution (server timestamp wins; one attempt per user per day eliminates most conflicts)
 
 **Market Risks:**
-- LinkedIn improves Zip with social features → mitigated by ZipPath's platform independence, group depth, and offline support
+- LinkedIn improves Zip with social features → mitigated by Icos's platform independence, group depth, and offline support
 - Low initial adoption → mitigated by viral mechanics (share cards, group invites) and zero-friction anonymous onboarding
 
 **Resource Risks:**
@@ -164,9 +164,9 @@ Core puzzle gameplay + daily puzzle system + groups with leaderboards + offline 
 
 ## User Journeys
 
-### Journey 1: Dana Discovers ZipPath (Primary User — Daily Puzzler)
+### Journey 1: Dana Discovers Icos (Primary User — Daily Puzzler)
 
-Dana, 30, is a product designer who plays Wordle every morning with her coffee. Her coworker texts the group chat: "I solved today's ZipPath in 0:38! Can you beat me?" with a colorful share card.
+Dana, 30, is a product designer who plays Wordle every morning with her coffee. Her coworker texts the group chat: "I solved today's Icos in 0:38! Can you beat me?" with a colorful share card.
 
 Dana taps the link and downloads the app. It opens immediately to today's puzzle — no sign-up screen, no tutorial gate. She drags her finger across the 6x6 grid, connecting waypoints 1 through 8 in order while filling every cell. The path draws smoothly with a subtle blue glow. When she hits a waypoint, the circle pulses coral-orange with a satisfying haptic tap.
 
@@ -174,11 +174,11 @@ She backtracks by dragging backwards — the path erases smoothly. After 1 minut
 
 She taps "Join Group" from the share card link, sees her coworker at #1 with 0:38, and she's #2 at 1:12. Three other coworkers haven't solved yet. She screenshots the leaderboard and sends it to the group chat: "Challenge accepted."
 
-The next morning, a notification appears: "Today's ZipPath is ready — 5x5 Monday." She's hooked. Day 3, she creates an account to preserve her streak.
+The next morning, a notification appears: "Today's Icos is ready — 5x5 Monday." She's hooked. Day 3, she creates an account to preserve her streak.
 
 ### Journey 2: Chris Chases the Streak (Primary User — Competitive Optimizer)
 
-Chris, 27, is a software engineer on day 47 of his ZipPath streak. He opens the app at 6:15 AM before anyone else in his three groups. Today is Thursday — a 6x7 grid, medium-hard difficulty.
+Chris, 27, is a software engineer on day 47 of his Icos streak. He opens the app at 6:15 AM before anyone else in his three groups. Today is Thursday — a 6x7 grid, medium-hard difficulty.
 
 He studies the waypoint positions for 5 seconds, then starts drawing. No hints — he hasn't used one since day 12. He backtracks twice when he realizes a path won't reach waypoint 5 without isolating a corner. At 0:52, the grid is complete. His stats page shows: average solve time trending down, 47-day streak (longest ever), #1 rank in 2 of 3 groups this week.
 
@@ -196,9 +196,9 @@ Over the following weeks, the remaining 4 team members join. Sam creates a secon
 
 ### Journey 4: New User via Share Card (Secondary User — Casual Discoverer)
 
-Alex, 40, sees a ZipPath share card on Instagram Stories from a friend. The card shows a 7x7 grid silhouette with colored blocks indicating the general path shape, time "0:55," and the text "I solved today's ZipPath in 0:55! Can you beat my time?"
+Alex, 40, sees a Icos share card on Instagram Stories from a friend. The card shows a 7x7 grid silhouette with colored blocks indicating the general path shape, time "0:55," and the text "I solved today's Icos in 0:55! Can you beat my time?"
 
-Alex taps through to the App Store, downloads ZipPath (38 MB), and opens it. No account creation — the puzzle is immediately playable. Alex completes it with 2 hints in 2:30. The result screen says "Faster than 28% of players." Below: "Create an account to save your streak and join groups." Alex continues as anonymous for 3 more days, then creates an account after a group invite from a coworker.
+Alex taps through to the App Store, downloads Icos (38 MB), and opens it. No account creation — the puzzle is immediately playable. Alex completes it with 2 hints in 2:30. The result screen says "Faster than 28% of players." Below: "Create an account to save your streak and join groups." Alex continues as anonymous for 3 more days, then creates an account after a group invite from a coworker.
 
 ### Journey 5: Admin Managing Group Issues (Edge Case — Group Admin)
 
@@ -218,7 +218,7 @@ Sam notices a group member posting offensive display names. She opens the group 
 
 ### Detected Innovation Areas
 
-ZipPath's core gameplay (Hamiltonian path puzzle) is proven but the social wrapper and specific differentiating features represent genuine innovation in the casual puzzle space:
+Icos's core gameplay (Hamiltonian path puzzle) is proven but the social wrapper and specific differentiating features represent genuine innovation in the casual puzzle space:
 
 1. **Group Leaderboard Mechanic** — No daily puzzle app offers private group leaderboards with real-time ranking. This transforms a solo experience into a social competition without requiring simultaneous play.
 

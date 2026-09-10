@@ -18,12 +18,12 @@ classification:
   projectContext: greenfield
 ---
 
-# Architecture Decision Document - ZipPath
+# Architecture Decision Document - Icos
 
 **Author:** Sarathfrancis
 **Date:** 2026-03-02
 
-_This document defines the comprehensive architectural decisions for ZipPath, a cross-platform mobile puzzle game built with Flutter and Supabase. All AI agents implementing this project must follow these decisions exactly to ensure consistent, conflict-free development._
+_This document defines the comprehensive architectural decisions for Icos, a cross-platform mobile puzzle game built with Flutter and Supabase. All AI agents implementing this project must follow these decisions exactly to ensure consistent, conflict-free development._
 
 ---
 
@@ -33,7 +33,7 @@ _This document defines the comprehensive architectural decisions for ZipPath, a 
 
 **Functional Requirements:**
 
-ZipPath contains 61 functional requirements organized into 10 categories that collectively define a daily puzzle game with social group mechanics:
+Icos contains 61 functional requirements organized into 10 categories that collectively define a daily puzzle game with social group mechanics:
 
 | FR Category | Count | Architectural Implications |
 |-------------|-------|---------------------------|
@@ -50,7 +50,7 @@ ZipPath contains 61 functional requirements organized into 10 categories that co
 
 **Non-Functional Requirements:**
 
-ZipPath defines 22 NFRs across 5 categories that constrain architectural choices:
+Icos defines 22 NFRs across 5 categories that constrain architectural choices:
 
 | NFR Category | Count | Key Constraints |
 |--------------|-------|-----------------|
@@ -112,7 +112,7 @@ The PLAN.md provides a detailed, project-specific directory structure (Section 1
 **Initialization Command:**
 
 ```bash
-flutter create --org com.zippath --project-name zippath --platforms ios,android zippath
+flutter create --org com.icos --project-name icos --platforms ios,android icos
 ```
 
 Post-creation, the project structure is reorganized to match the feature-based architecture defined in Section 12 of PLAN.md.
@@ -287,7 +287,7 @@ Post-creation, the project structure is reorganized to match the feature-based a
 
 **Routing: GoRouter**
 - Declarative route definitions in `core/router/app_router.dart`
-- Deep link support for group invites: `https://zippath.app/join/{invite_code}`
+- Deep link support for group invites: `https://icos.app/join/{invite_code}`
 - Bottom navigation with ShellRoute for persistent tab bar across Home, Groups, Stats, Profile
 - Route guards for authenticated-only routes (group creation, profile editing)
 
@@ -674,7 +674,7 @@ Widget build(BuildContext context) {
 ### Complete Project Directory Structure
 
 ```
-zippath/
+icos/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml                          # Lint, test, build on push/PR
@@ -1174,7 +1174,7 @@ All 61 functional requirements are architecturally supported:
 
 ```bash
 # 1. Create Flutter project
-flutter create --org com.zippath --project-name zippath --platforms ios,android zippath
+flutter create --org com.icos --project-name icos --platforms ios,android icos
 
 # 2. Set up project structure per directory tree above
 

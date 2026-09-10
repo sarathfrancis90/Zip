@@ -1,7 +1,7 @@
--- RLS smoke test for the Zlynkr schema. LOCAL STACKS ONLY (inserts into auth.users).
+-- RLS smoke test for the Icos schema. LOCAL STACKS ONLY (inserts into auth.users).
 --
 --   psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/tests/rls_smoke.sql
---   (or: docker exec -i supabase_db_zlynkr psql -U postgres -d postgres -v ON_ERROR_STOP=1 < supabase/tests/rls_smoke.sql)
+--   (or: docker exec -i supabase_db_icos psql -U postgres -d postgres -v ON_ERROR_STOP=1 < supabase/tests/rls_smoke.sql)
 --
 -- Every assertion is a DO block that RAISEs on failure; the whole script runs in
 -- one transaction and is rolled back at the end, so it leaves no data behind.

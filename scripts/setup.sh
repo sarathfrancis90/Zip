@@ -1,10 +1,10 @@
 #!/bin/bash
-# ZipPath Development Environment Setup
+# Icos Development Environment Setup
 # Run this script after installing Flutter SDK
 
 set -e
 
-echo "=== ZipPath Development Setup ==="
+echo "=== Icos Development Setup ==="
 
 # Check Flutter
 if ! command -v flutter &> /dev/null; then
@@ -21,7 +21,7 @@ flutter --version
 if [ ! -f "pubspec.yaml" ]; then
     echo ""
     echo "=== Creating Flutter Project ==="
-    flutter create --org com.zippath --project-name zippath --platforms ios,android .
+    flutter create --org com.icos --project-name icos --platforms ios,android .
     echo "Flutter project created."
 fi
 

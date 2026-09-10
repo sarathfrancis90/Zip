@@ -8,14 +8,14 @@ type: testing-strategy
 scope: visual-validation
 ---
 
-# Visual Testing Strategy - ZipPath
+# Visual Testing Strategy - Icos
 
 **Author:** Sarathfrancis
 **Date:** 2026-03-02
 
 ## Purpose
 
-Define the automated visual validation approach for ZipPath to ensure UI correctness, prevent visual regressions, and maintain design consistency across themes, grid sizes, and device configurations.
+Define the automated visual validation approach for Icos to ensure UI correctness, prevent visual regressions, and maintain design consistency across themes, grid sizes, and device configurations.
 
 ## Testing Layers
 
@@ -183,7 +183,7 @@ void main() {
 **Maestro flow example:**
 
 ```yaml
-appId: com.zippath.app
+appId: com.icos.app
 ---
 - launchApp
 - takeScreenshot: 01_launch

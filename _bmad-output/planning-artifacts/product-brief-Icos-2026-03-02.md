@@ -6,11 +6,11 @@ date: 2026-03-02
 author: Sarathfrancis
 ---
 
-# Product Brief: ZipPath (Zip)
+# Product Brief: Icos (Zip)
 
 ## Executive Summary
 
-**ZipPath** is a premium mobile puzzle game for Android and iOS where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. Inspired by LinkedIn's Zip game, ZipPath differentiates through superior UI/UX with fluid animations and haptic feedback, a group-based social system with daily leaderboards, and an offline-first architecture that lets players solve puzzles without internet connectivity.
+**Icos** is a premium mobile puzzle game for Android and iOS where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. Inspired by LinkedIn's Zip game, Icos differentiates through superior UI/UX with fluid animations and haptic feedback, a group-based social system with daily leaderboards, and an offline-first architecture that lets players solve puzzles without internet connectivity.
 
 The product targets the rapidly growing casual puzzle market — validated by the success of Wordle, NYT Games, and LinkedIn's own puzzle suite — while carving its own niche through social group mechanics that transform a solo puzzle into a shared daily ritual among friends, families, and coworkers.
 
@@ -46,7 +46,7 @@ None offer the combination of: a compelling Hamiltonian path puzzle + private gr
 
 ### Proposed Solution
 
-ZipPath delivers:
+Icos delivers:
 
 - **One daily puzzle for everyone** — same puzzle, same difficulty curve (Monday=easy 5x5, Sunday=hard 8x8), creating a shared experience
 - **Group-based social competition** — create private groups (up to 50 members) with daily and weekly leaderboards ranked by hints used, then solve time
@@ -76,21 +76,21 @@ The puzzle engine runs entirely client-side for instant feedback, with server-si
 - **Profile**: 28-35 year old professional who plays Wordle, NYT Connections, or LinkedIn Zip daily during morning coffee or commute
 - **Motivation**: Enjoys the ritual of a daily brain challenge; likes comparing results with friends
 - **Current pain**: Screenshots solve-time comparisons in group chats are clunky; LinkedIn Zip has no real leaderboard
-- **ZipPath value**: One-tap group leaderboard shows where she ranks among friends each day; spoiler-free sharing to Instagram Stories
+- **Icos value**: One-tap group leaderboard shows where she ranks among friends each day; spoiler-free sharing to Instagram Stories
 - **Success moment**: Seeing she beat her coworker's time and sending a share card to the group chat
 
 **Persona 2: "Competitive Chris"**
 - **Profile**: 22-40 year old who optimizes solve times, tracks personal stats, maintains long streaks
 - **Motivation**: Self-improvement, streak maintenance, being #1 on leaderboards
 - **Current pain**: No good stats tracking or streak mechanics in existing path puzzles
-- **ZipPath value**: Detailed statistics (average time, distribution chart), streak tracking with freeze protection, group ranking badges
+- **Icos value**: Detailed statistics (average time, distribution chart), streak tracking with freeze protection, group ranking badges
 - **Success moment**: Hitting a 30-day streak, earning the top rank in multiple groups
 
 **Persona 3: "Social Sam"**
 - **Profile**: 25-45 year old who creates and manages friend/coworker groups
 - **Motivation**: Bringing people together through shared daily activities
 - **Current pain**: Hard to organize puzzle competitions; no easy invite/group system in existing games
-- **ZipPath value**: One-tap group creation, shareable invite codes/QR/deep links, group streak tracking
+- **Icos value**: One-tap group creation, shareable invite codes/QR/deep links, group streak tracking
 - **Success moment**: Their office group of 15 people all solving the daily puzzle and competing on the leaderboard
 
 ### Secondary Users

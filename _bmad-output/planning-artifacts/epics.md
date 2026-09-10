@@ -11,11 +11,11 @@ inputDocuments:
   - visual-testing-strategy.md
 ---
 
-# ZipPath - Epic Breakdown
+# Icos - Epic Breakdown
 
 ## Overview
 
-This document provides the complete epic and story breakdown for ZipPath, decomposing the requirements from the PRD, UX Design, Architecture, and production-readiness audit into implementable stories. All requirements target production readiness — no MVP phasing.
+This document provides the complete epic and story breakdown for Icos, decomposing the requirements from the PRD, UX Design, Architecture, and production-readiness audit into implementable stories. All requirements target production readiness — no MVP phasing.
 
 ## Requirements Inventory
 
@@ -126,7 +126,7 @@ FR67: System handles Data Subject Access Requests (DSAR) — backend supports ge
 FR68: System checks minimum required app version on launch and displays a blocking force-update screen directing the user to the app store when the client version is below the required minimum
 FR69: System auto-saves puzzle state (current path, hints used, undos used, elapsed time) to local storage on every move, allowing full resume after crash, app kill, or device restart
 FR70: System pauses the solve timer when the app is backgrounded and resumes from the paused time when the app returns to foreground
-FR71: System displays a branded splash screen with ZipPath logo during cold start
+FR71: System displays a branded splash screen with Icos logo during cold start
 FR72: System locks screen orientation to portrait on phones (width < 768dp); supports both portrait and landscape on tablets
 FR73: System displays a maintenance mode screen with estimated restoration time when the backend is unavailable, with automatic retry and graceful offline fallback for cached content
 FR74: System restores app state after OS process death — returns user to the correct screen (puzzle in progress, result pending, home) based on persisted navigation state
@@ -305,7 +305,7 @@ NFR50: Orientation locked to portrait on phones (screen width < 768dp); portrait
 
 **From Architecture:**
 
-- Starter template: Custom Flutter project scaffold from PLAN.md Section 12 structure using `flutter create --org com.zippath --project-name zippath --platforms ios,android`
+- Starter template: Custom Flutter project scaffold from PLAN.md Section 12 structure using `flutter create --org com.icos --project-name icos --platforms ios,android`
 - Feature-based architecture: `lib/features/{feature}/data/domain/providers/presentation/` with 4-layer internal structure per feature
 - Database: 6 PostgreSQL tables (profiles, puzzles, puzzle_attempts, streaks, groups, group_members) with SQL migrations in `supabase/migrations/`
 - Row-Level Security (RLS) policies on all public tables enforcing access control at database layer
@@ -358,7 +358,7 @@ NFR50: Orientation locked to portrait on phones (screen width < 768dp); portrait
 - First-time user affordances: pulsing waypoint 1, "Drag to draw" tooltip (auto-dismissing)
 - Force update screen: full-screen blocking with app store link and explanation
 - Maintenance mode screen: branded, with estimated restoration time and automatic retry
-- Splash screen: branded ZipPath logo with background color matching selected theme
+- Splash screen: branded Icos logo with background color matching selected theme
 
 **From Visual Testing Strategy:**
 
@@ -558,7 +558,7 @@ Users are protected from offensive content through profanity filtering on displa
 **Dependencies:** Epic 1 (auth, profiles), Epic 4 (groups, leaderboards)
 
 ### Epic 9: Accessibility & Inclusive Design
-All users can enjoy ZipPath regardless of ability. Screen reader support covers all non-game UI (Home, Groups, Stats, Profile, Settings) and puzzle grid cells with semantic labels. Users can enable colorblind mode (deuteranopia, protanopia, tritanopia palettes) with discoverability prompts. The app supports dynamic type up to 200% scaling without layout breakage, tap-to-select as an alternative to drag input, visible focus indicators for keyboard/switch navigation, and visual-only alternatives for audio/haptic feedback on devices without haptic motors.
+All users can enjoy Icos regardless of ability. Screen reader support covers all non-game UI (Home, Groups, Stats, Profile, Settings) and puzzle grid cells with semantic labels. Users can enable colorblind mode (deuteranopia, protanopia, tritanopia palettes) with discoverability prompts. The app supports dynamic type up to 200% scaling without layout breakage, tap-to-select as an alternative to drag input, visible focus indicators for keyboard/switch navigation, and visual-only alternatives for audio/haptic feedback on devices without haptic motors.
 
 **FRs covered:** FR96, FR111, FR112, FR114, FR115, FR116, FR117
 **Key NFRs:** NFR16 (44dp touch targets), NFR17 (colorblind patterns), NFR18 (WCAG 2.1 AA contrast), NFR19 (reduced motion), NFR48 (screen reader verification), NFR49 (dynamic type golden tests)
@@ -594,7 +594,7 @@ So that I have a polished, navigable app experience from the first moment.
 
 **Given** the app has never been launched on this device
 **When** the user opens the app for the first time
-**Then** a branded ZipPath splash screen is displayed during cold start with the ZipPath logo and a background color matching the current theme
+**Then** a branded Icos splash screen is displayed during cold start with the Icos logo and a background color matching the current theme
 **And** the Flutter project is scaffolded per PLAN.md Section 12 structure with core dependencies installed (Riverpod, GoRouter, Supabase SDK, Firebase SDK)
 
 **Given** the splash screen has completed loading
@@ -1447,7 +1447,7 @@ So that I can easily connect with friends and start competing.
 **And** if the app is not installed, the deep link redirects to the appropriate app store
 
 **Given** the user selects "Scan QR Code" from the join group options
-**When** the camera permission is granted and a valid QR code containing a ZipPath invite link is scanned
+**When** the camera permission is granted and a valid QR code containing a Icos invite link is scanned
 **Then** the invite code is extracted from the QR code and the join flow proceeds identically to the deep link flow
 
 **Given** a valid invite code is submitted to the join-group Edge Function
@@ -1614,7 +1614,7 @@ So that I can show off my result without spoiling the puzzle for others.
 
 **Given** a player has completed today's puzzle and is on the result screen
 **When** the system generates the share card
-**Then** the card renders at 280x380px with a dark background containing the ZipPath logo, day identifier (e.g., "Day 42"), grid size (e.g., "6x6"), solve time, and a "Can you beat my time?" call-to-action
+**Then** the card renders at 280x380px with a dark background containing the Icos logo, day identifier (e.g., "Day 42"), grid size (e.g., "6x6"), solve time, and a "Can you beat my time?" call-to-action
 **And** the card includes an abstract path visualization (e.g., a stylized grid outline with a colored trail that does NOT match the actual solution path) so the puzzle is not spoiled
 
 **Given** the share card is being generated
@@ -1647,11 +1647,11 @@ So that I can easily post my result on social media or send it to friends.
 
 **Given** a player is on the result screen after completing a puzzle and a share card has been generated
 **When** the player taps the "Share" button
-**Then** the native OS share sheet (via `share_plus` package) opens with the generated share card image attached and a pre-composed text message including the day identifier and solve time (e.g., "ZipPath Day 42 - 6x6 in 1:23.4 - Can you beat my time?")
+**Then** the native OS share sheet (via `share_plus` package) opens with the generated share card image attached and a pre-composed text message including the day identifier and solve time (e.g., "Icos Day 42 - 6x6 in 1:23.4 - Can you beat my time?")
 
 **Given** a player is on the result screen after completing a puzzle
 **When** the player taps the "Copy" button
-**Then** the result is copied to the system clipboard as formatted text (e.g., "ZipPath Day 42 (6x6)\nTime: 1:23.4\nHints: 0\nhttps://zippath.app") without any image data
+**Then** the result is copied to the system clipboard as formatted text (e.g., "Icos Day 42 (6x6)\nTime: 1:23.4\nHints: 0\nhttps://icos.app") without any image data
 
 **Given** the player taps the "Copy" button
 **When** the text is successfully copied to the clipboard
@@ -1679,15 +1679,15 @@ So that I can easily invite friends to join my group regardless of how they pref
 
 **Given** a player is viewing a group they belong to on the group detail screen
 **When** the player taps the "Invite" button
-**Then** a bottom sheet appears with three sharing options: (1) "Share Link" — shares a deep link `https://zippath.app/join/{invite_code}`, (2) "Copy Code" — copies the 6-character invite code as text, and (3) "Share QR Code" — shares a generated QR code image encoding the deep link URL
+**Then** a bottom sheet appears with three sharing options: (1) "Share Link" — shares a deep link `https://icos.app/join/{invite_code}`, (2) "Copy Code" — copies the 6-character invite code as text, and (3) "Share QR Code" — shares a generated QR code image encoding the deep link URL
 
-**Given** a user who has ZipPath installed taps a deep link (`https://zippath.app/join/{invite_code}`)
+**Given** a user who has Icos installed taps a deep link (`https://icos.app/join/{invite_code}`)
 **When** the app opens or is brought to foreground
 **Then** GoRouter navigates directly to the group join confirmation screen showing the group name, member count, and a "Join Group" button, pre-filled with the invite code from the URL
 
-**Given** a user who does NOT have ZipPath installed taps a deep link
+**Given** a user who does NOT have Icos installed taps a deep link
 **When** the link is opened in a mobile browser
-**Then** the user is redirected to the appropriate app store (App Store on iOS, Play Store on Android) to install ZipPath
+**Then** the user is redirected to the appropriate app store (App Store on iOS, Play Store on Android) to install Icos
 
 **Given** a user taps a deep link for a group that has been deleted
 **When** the app attempts to resolve the invite code
@@ -1727,7 +1727,7 @@ So that I can always play even if I have no internet connection.
 **When** the background fetch service runs (scheduled at least 12 hours before the next puzzle's release at midnight UTC)
 **Then** tomorrow's puzzle data is fetched from the Supabase API and stored in the local Hive cache box, including grid dimensions, waypoints, walls, and metadata (but NOT the solution path, which remains server-only per NFR9)
 
-**Given** a user installs and opens ZipPath for the first time with no network connectivity
+**Given** a user installs and opens Icos for the first time with no network connectivity
 **When** the app attempts to load today's puzzle
 **Then** the app loads one of 7 bundled fallback puzzles from `assets/puzzles/fallback_puzzles.json`, selected based on the current day-of-week difficulty mapping (e.g., Monday = 5x5 easy), and marks it as a "practice puzzle" in the UI
 
@@ -1812,7 +1812,7 @@ So that my scores and streaks are always accurately recorded.
 
 ### Story 6.4: Multi-Device Enforcement & Session Sync
 
-As a player who uses ZipPath on multiple devices,
+As a player who uses Icos on multiple devices,
 I want my puzzle attempts enforced to one per day across all devices and my progress synced consistently,
 So that the game is fair and my stats are always up to date regardless of which device I use.
 
@@ -1821,24 +1821,24 @@ So that the game is fair and my stats are always up to date regardless of which 
 **Acceptance Criteria:**
 
 **Given** a player has already solved today's puzzle on Device A and the solve has been server-verified
-**When** the player opens ZipPath on Device B and navigates to today's puzzle
+**When** the player opens Icos on Device B and navigates to today's puzzle
 **Then** Device B displays the "already solved" state showing the existing result (solve time, hints used, undos used) fetched from the server, rather than allowing a new attempt
 **And** the puzzle grid is shown in its completed state (path filled in) as a read-only view
 
-**Given** a player starts solving today's puzzle on Device A (but has not completed it) and then opens ZipPath on Device B
+**Given** a player starts solving today's puzzle on Device A (but has not completed it) and then opens Icos on Device B
 **When** Device B loads today's puzzle
 **Then** Device B shows a fresh puzzle state (not the in-progress state from Device A), because in-progress state is local-only; the first device to submit a server-verified completion is the recorded attempt
 
 **Given** a player completes a puzzle on one device and the server records the solve
-**When** the player opens ZipPath on another device
+**When** the player opens Icos on another device
 **Then** the streaks data (current_streak, longest_streak, last_solve_date), total puzzles solved, average solve time, and streak_freezes_remaining are consistent with the server state, fetched via a pull-based refresh on app foreground
 
 **Given** a player joins or leaves a group on one device
-**When** the player opens ZipPath on another device
+**When** the player opens Icos on another device
 **Then** the group memberships are consistent — the groups list reflects the current server state, fetched on app foreground via Supabase query on the `group_members` table filtered by the user's ID
 
 **Given** a player's profile (display_name, avatar_id) is updated on one device
-**When** the player opens ZipPath on another device
+**When** the player opens Icos on another device
 **Then** the updated profile data is reflected within the next foreground refresh cycle, pulled from the `profiles` table via Supabase client SDK
 
 **Given** the player is a member of one or more groups and the app is in the foreground
@@ -1907,7 +1907,7 @@ So that I do not forget to play and can maintain my streak.
 
 **Given** a player has enabled notifications and the daily puzzle reminder type is turned on (default: on)
 **When** the user-configured reminder time is reached (default: 8:00 AM in the user's local timezone)
-**Then** a push notification is delivered with title "ZipPath" and body "Today's ZipPath is ready -- [day_of_week] [grid_size]" (e.g., "Today's ZipPath is ready -- Wednesday 6x6")
+**Then** a push notification is delivered with title "Icos" and body "Today's Icos is ready -- [day_of_week] [grid_size]" (e.g., "Today's Icos is ready -- Wednesday 6x6")
 
 **Given** a player has already solved today's puzzle before the reminder time
 **When** the notification scheduling logic evaluates whether to send the reminder
@@ -1936,12 +1936,12 @@ So that I stay engaged with my group and do not accidentally lose my streak.
 
 **Given** a group has M total members and N members have solved today's puzzle where N = M-1 (only one member remains unsolved)
 **When** the server-side notification logic evaluates group completion status
-**Then** a push notification is sent ONLY to the unsolved member(s) with title "ZipPath" and body "You're the last one! [N]/[M] members have solved today's puzzle" (e.g., "You're the last one! 4/5 members have solved today's puzzle")
+**Then** a push notification is sent ONLY to the unsolved member(s) with title "Icos" and body "You're the last one! [N]/[M] members have solved today's puzzle" (e.g., "You're the last one! 4/5 members have solved today's puzzle")
 **And** the notification payload includes a deep link to the puzzle screen
 
 **Given** a player has an active streak of N days and has NOT solved today's puzzle
 **When** the configurable streak alert time is reached (default: 6:00 PM local time)
-**Then** a push notification is delivered with title "ZipPath" and body "Solve today to keep your [N]-day streak!" (e.g., "Solve today to keep your 12-day streak!")
+**Then** a push notification is delivered with title "Icos" and body "Solve today to keep your [N]-day streak!" (e.g., "Solve today to keep your 12-day streak!")
 
 **Given** a player has already solved today's puzzle before the streak alert time
 **When** the streak alert notification scheduling logic runs
@@ -2123,7 +2123,7 @@ So that banned users cannot interact with the platform and other users are prote
 
 **Given** a banned user attempts to log in (email/password, Google, or Apple OAuth)
 **When** the authentication succeeds at the Supabase Auth layer but the app checks the user's profile
-**Then** the login is rejected with a full-screen error message: "Your account has been suspended. Contact support@zippath.app for assistance." and the user is signed out immediately
+**Then** the login is rejected with a full-screen error message: "Your account has been suspended. Contact support@icos.app for assistance." and the user is signed out immediately
 **And** this check occurs via a post-auth profile fetch that reads `is_banned` from the `profiles` table before allowing navigation to the home screen
 
 **Given** a banned user's device still has a valid session token (not yet expired)
@@ -2175,7 +2175,7 @@ So that we minimize data storage costs, comply with data protection principles, 
 **Then** those leaderboard entries are anonymized (display name set to "Deleted User", avatar set to placeholder) BEFORE the profile and auth records are deleted, preserving leaderboard integrity using the same pattern as registered account deletion
 ## Epic 9: Accessibility & Inclusive Design
 
-All users can enjoy ZipPath regardless of ability. Screen reader support covers all non-game UI (Home, Groups, Stats, Profile, Settings) and puzzle grid cells with semantic labels. Users can enable colorblind mode (deuteranopia, protanopia, tritanopia palettes) with discoverability prompts. The app supports dynamic type up to 200% scaling without layout breakage, visible focus indicators for keyboard/switch navigation, and visual-only alternatives for audio/haptic feedback on devices without haptic motors.
+All users can enjoy Icos regardless of ability. Screen reader support covers all non-game UI (Home, Groups, Stats, Profile, Settings) and puzzle grid cells with semantic labels. Users can enable colorblind mode (deuteranopia, protanopia, tritanopia palettes) with discoverability prompts. The app supports dynamic type up to 200% scaling without layout breakage, visible focus indicators for keyboard/switch navigation, and visual-only alternatives for audio/haptic feedback on devices without haptic motors.
 
 **FRs covered:** FR96, FR111, FR112, FR114, FR115, FR116, FR117
 **Key NFRs:** NFR16 (44dp touch targets), NFR17 (colorblind patterns), NFR18 (WCAG 2.1 AA contrast), NFR19 (reduced motion), NFR48 (screen reader verification), NFR49 (dynamic type golden tests)
@@ -2294,7 +2294,7 @@ So that I can differentiate between path cells, waypoints, walls, and empty cell
 
 **Given** a user on first launch whose device has system-level accessibility color filters enabled (e.g., iOS color filters or Android color correction)
 **When** the app detects the system accessibility setting
-**Then** a one-time, non-blocking prompt appears: "It looks like you use color adjustments. ZipPath has colorblind-friendly modes. Would you like to try one?"
+**Then** a one-time, non-blocking prompt appears: "It looks like you use color adjustments. Icos has colorblind-friendly modes. Would you like to try one?"
 **And** the prompt offers "Go to Settings" and "Not now" options
 **And** dismissing with "Not now" records that the prompt was shown, preventing it from appearing again
 
@@ -2383,13 +2383,13 @@ So that I understand why the app is unavailable and know exactly what action to 
 
 **Given** a user launches the app with a client version below the minimum required version configured in Firebase Remote Config (or Supabase equivalent)
 **When** the app completes the version check during startup
-**Then** a full-screen blocking UI is displayed with: the ZipPath logo, a message explaining "A new version of ZipPath is required", a description of why the update is needed, and a prominent "Update Now" button linking to the appropriate app store (App Store on iOS, Play Store on Android)
+**Then** a full-screen blocking UI is displayed with: the Icos logo, a message explaining "A new version of Icos is required", a description of why the update is needed, and a prominent "Update Now" button linking to the appropriate app store (App Store on iOS, Play Store on Android)
 **And** no dismiss option, back gesture, or navigation is available -- the user cannot bypass the force update screen
 **And** the version check uses the semantic version comparison (major.minor.patch)
 
 **Given** the backend returns a 503 status code on any API call or the health check endpoint (`/health`) returns a non-200 response
 **When** the app detects the backend is unavailable
-**Then** a branded maintenance mode screen is displayed showing: the ZipPath logo, "We're performing maintenance" message, an estimated restoration time if provided in the response (or "We'll be back shortly" if not), and a visual countdown or spinner indicating automatic retry
+**Then** a branded maintenance mode screen is displayed showing: the Icos logo, "We're performing maintenance" message, an estimated restoration time if provided in the response (or "We'll be back shortly" if not), and a visual countdown or spinner indicating automatic retry
 **And** the app automatically retries the health check every 30 seconds in the background
 **And** when the health check succeeds, the maintenance screen dismisses automatically and the user is returned to their previous screen
 
@@ -2514,7 +2514,7 @@ So that I can recover from failures and continue playing without frustration.
 **Given** a user attempting to link their anonymous session to a Google or Apple account
 **When** the OAuth sign-in or account linking operation fails (network error, OAuth provider error, account already linked to another user)
 **Then** the anonymous session is fully preserved -- no data is lost (puzzle history, streaks, group memberships all intact)
-**And** an error message is displayed explaining what happened: "Sign-in failed. Your progress is safe." with specific context if available (e.g., "This Google account is already linked to another ZipPath account")
+**And** an error message is displayed explaining what happened: "Sign-in failed. Your progress is safe." with specific context if available (e.g., "This Google account is already linked to another Icos account")
 **And** two action buttons are shown: "Try Again" (re-initiates the OAuth flow) and "Not Now" (dismisses the error and returns to the previous screen)
 
 **Given** a user opens the app with no cached puzzle data and no network connectivity

@@ -1,4 +1,4 @@
-# ZipPath - Production-Ready Mobile Puzzle Game
+# Icos - Production-Ready Mobile Puzzle Game
 ## Comprehensive Implementation Plan
 
 ---
@@ -21,7 +21,7 @@
 
 ## 1. Executive Summary
 
-**ZipPath** is a premium mobile puzzle game for Android and iOS where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. It differentiates from LinkedIn's Zip through superior UI/UX, group-based social features, and a richer game experience.
+**Icos** is a premium mobile puzzle game for Android and iOS where players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. It differentiates from LinkedIn's Zip through superior UI/UX, group-based social features, and a richer game experience.
 
 **Core differentiators:**
 - Beautiful, polished UI with fluid animations and haptic feedback
@@ -123,7 +123,7 @@
 - [ ] **Spoiler-free result sharing** — generate a shareable image/text showing:
   - Grid size, day, solve time
   - Abstract path visualization (colored blocks showing general path shape, no solution revealed)
-  - "I solved today's ZipPath in 0:42! Can you beat my time?"
+  - "I solved today's Icos in 0:42! Can you beat my time?"
 - [ ] **Share to social media** — Instagram Stories, WhatsApp, Twitter/X, clipboard
 - [ ] **Group invite sharing** — deep link + invite code
 
@@ -479,7 +479,7 @@ CREATE POLICY "Group members can read members"
 The puzzle generator uses the **Backbite algorithm** to create random Hamiltonian paths on grids, then places waypoints and walls to create unique puzzles.
 
 ```
-Algorithm: Generate ZipPath Puzzle
+Algorithm: Generate Icos Puzzle
 ─────────────────────────────────
 Input:  width, height, difficulty_level
 Output: puzzle (waypoints, walls, solution_path)
@@ -524,7 +524,7 @@ Output: puzzle (waypoints, walls, solution_path)
 ### Solver (for verification & hints)
 
 ```
-Algorithm: Solve ZipPath Puzzle (DFS with pruning)
+Algorithm: Solve Icos Puzzle (DFS with pruning)
 ──────────────────────────────────────────────────
 Input:  grid, waypoints, walls
 Output: solution_path or NONE
@@ -687,7 +687,7 @@ CREATE GROUP                JOIN GROUP                  MANAGE GROUP
 
 ### Invite System
 - **Invite code**: 6-character alphanumeric (e.g., "ZP3K9M"), case-insensitive
-- **Deep link**: `https://zippath.app/join/ZP3K9M` → opens app or app store
+- **Deep link**: `https://icos.app/join/ZP3K9M` → opens app or app store
 - **QR code**: generated in-app for in-person sharing
 - **Expiry**: codes don't expire (simplicity), but groups have max 50 members
 - **Regenerate code**: admin can invalidate old code and create new one
@@ -1050,7 +1050,7 @@ test/
 
 ## Summary
 
-**ZipPath** is a beautifully crafted, socially engaging Hamiltonian path puzzle game. The key architectural decisions are:
+**Icos** is a beautifully crafted, socially engaging Hamiltonian path puzzle game. The key architectural decisions are:
 
 1. **Flutter** for pixel-perfect, performant cross-platform UI
 2. **Supabase (PostgreSQL)** for relational data that naturally fits users, groups, scores, and leaderboards
@@ -1058,4 +1058,4 @@ test/
 4. **Group-based social** that makes daily puzzles a shared experience
 5. **Phased development** that delivers a playable game in 3 weeks and a launch-ready product in 12 weeks
 
-The feature set balances familiar daily-puzzle mechanics (proven by Wordle, NYT Games, LinkedIn) with unique differentiators (Ghost Race, Path Heatmap, Puzzle DNA) that give ZipPath its own identity.
+The feature set balances familiar daily-puzzle mechanics (proven by Wordle, NYT Games, LinkedIn) with unique differentiators (Ghost Race, Path Heatmap, Puzzle DNA) that give Icos its own identity.
