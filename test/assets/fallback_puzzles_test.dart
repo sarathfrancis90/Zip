@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
-import 'package:zlynkr/features/puzzle/domain/solver/puzzle_core.dart';
+import 'package:icos/features/puzzle/domain/models/puzzle.dart';
+import 'package:icos/features/puzzle/domain/solver/puzzle_core.dart';
 
 /// Locates the project root (directory containing pubspec.yaml) regardless of
 /// the working directory `flutter test` was launched from.

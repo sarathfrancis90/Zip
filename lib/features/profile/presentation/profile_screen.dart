@@ -21,8 +21,8 @@ import '../providers/profile_provider.dart';
 import 'widgets/colorblind_selector.dart';
 import 'widgets/edit_name_dialog.dart';
 
-const String kPrivacyPolicyUrl = 'https://zlynkr.app/privacy-policy.html';
-const String kTermsUrl = 'https://zlynkr.app/terms.html';
+const String kPrivacyPolicyUrl = 'https://icos.app/privacy-policy.html';
+const String kTermsUrl = 'https://icos.app/terms.html';
 
 class ProfileScreen extends ConsumerStatefulWidget {
   const ProfileScreen({super.key});
@@ -591,7 +591,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     if (!ok && context.mounted) {
       _snack(
         context,
-        'Notifications are disabled for Zlynkr. Enable them in system '
+        'Notifications are disabled for Icos. Enable them in system '
         'settings to get reminders.',
       );
     }
@@ -613,9 +613,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   void _showAboutDialog(BuildContext context, String? version) {
     showAboutDialog(
       context: context,
-      applicationName: 'Zlynkr',
+      applicationName: 'Icos',
       applicationVersion: version ?? '',
-      applicationLegalese: 'Copyright 2026 Zlynkr. All rights reserved.',
+      applicationLegalese: 'Copyright 2026 Icos. All rights reserved.',
       applicationIcon: Container(
         width: 48,
         height: 48,
@@ -649,8 +649,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         try {
           await Share.shareXFiles(
             [XFile(file.path, mimeType: 'application/json')],
-            subject: 'My Zlynkr data',
-            text: 'Your Zlynkr data export',
+            subject: 'My Icos data',
+            text: 'Your Icos data export',
           );
         } catch (e) {
           AppLogger.warn('Share export failed', error: e);

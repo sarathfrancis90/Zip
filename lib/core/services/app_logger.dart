@@ -43,7 +43,7 @@ abstract final class AppLogger {
     if (kDebugMode) {
       developer.log(
         _encode(entry),
-        name: 'zlynkr',
+        name: 'icos',
         level: _developerLevel(level),
         error: error,
         stackTrace: st,

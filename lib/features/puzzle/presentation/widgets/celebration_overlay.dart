@@ -104,7 +104,7 @@ class _CelebrationOverlayState extends State<CelebrationOverlay>
     try {
       final bytes = await ShareCardGenerator.captureFromWidget(_shareCardKey);
       if (bytes != null) {
-        final name = 'zlynkr-${widget.dateLabel ?? 'result'}.png';
+        final name = 'icos-${widget.dateLabel ?? 'result'}.png';
         await Share.shareXFiles(
           [XFile.fromData(bytes, mimeType: 'image/png', name: name)],
           text: text,

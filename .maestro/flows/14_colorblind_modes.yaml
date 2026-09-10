@@ -1,6 +1,6 @@
 # Flow 14: Colorblind Mode Visual Audit
 # Tests all 3 colorblind palettes on the puzzle screen.
-appId: com.zlynkr.zlynkr
+appId: com.icos.game
 
 ---
 

@@ -1,5 +1,5 @@
-name: zlynkr
-description: "Zlynkr - Feed the Path. A daily snake puzzle game."
+name: icos
+description: "Icos - one line, every cell. A daily Hamiltonian path puzzle."
 publish_to: 'none'
 version: 1.0.0+2
 

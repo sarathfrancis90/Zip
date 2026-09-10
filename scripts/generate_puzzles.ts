@@ -1,6 +1,6 @@
 #!/usr/bin/env -S deno run -A
 /**
- * Zlynkr puzzle generator CLI.
+ * Icos puzzle generator CLI.
  *
  *   deno run -A scripts/generate_puzzles.ts fallback
  *       Regenerates assets/puzzles/fallback_puzzles.json (7 puzzles, Mon..Sun,

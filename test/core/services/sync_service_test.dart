@@ -2,14 +2,14 @@ import 'dart:io';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/services/analytics_service.dart';
-import 'package:zlynkr/core/services/auth_session_provider.dart';
-import 'package:zlynkr/core/services/connectivity_service.dart';
-import 'package:zlynkr/core/services/edge_function_client.dart';
-import 'package:zlynkr/core/services/storage_service.dart';
-import 'package:zlynkr/core/services/sync_service.dart';
-import 'package:zlynkr/features/puzzle/data/score_signature.dart';
-import 'package:zlynkr/features/puzzle/data/submission_result.dart';
+import 'package:icos/core/services/analytics_service.dart';
+import 'package:icos/core/services/auth_session_provider.dart';
+import 'package:icos/core/services/connectivity_service.dart';
+import 'package:icos/core/services/edge_function_client.dart';
+import 'package:icos/core/services/storage_service.dart';
+import 'package:icos/core/services/sync_service.dart';
+import 'package:icos/features/puzzle/data/score_signature.dart';
+import 'package:icos/features/puzzle/data/submission_result.dart';
 
 import '../../helpers/storage_test_helpers.dart';
 

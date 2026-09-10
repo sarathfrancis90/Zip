@@ -1,4 +1,4 @@
-# Zlynkr R8/ProGuard keep rules.
+# Icos R8/ProGuard keep rules.
 # Applied to release builds only (see android/app/build.gradle.kts).
 # Flutter plugins ship their own consumer rules; these cover the gaps.
 
@@ -67,7 +67,7 @@
 -dontwarn com.google.gson.**
 
 # --- App code -------------------------------------------------------------
--keep class com.zlynkr.zlynkr.** { *; }
+-keep class com.icos.game.** { *; }
 
 # --- Misc -----------------------------------------------------------------
 # javax.* referenced by some transitive libs on older SDKs.

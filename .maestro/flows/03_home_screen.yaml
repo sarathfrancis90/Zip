@@ -1,6 +1,6 @@
 # Flow 03: Home Screen
 # Verifies the home screen renders with puzzle card and all elements.
-appId: com.zlynkr.zlynkr
+appId: com.icos.game
 
 ---
 
@@ -9,7 +9,7 @@ appId: com.zlynkr.zlynkr
 - runFlow: ../subflows/ensure_home.yaml
 
 # -- Home Screen --
-- assertVisible: "Zlynkr"
+- assertVisible: "Icos"
 - assertVisible: "Feed the Path"
 - takeScreenshot: 03_home/home_screen_full
 

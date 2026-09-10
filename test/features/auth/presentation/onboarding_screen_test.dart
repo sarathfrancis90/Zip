@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/auth/presentation/onboarding_screen.dart';
+import 'package:icos/features/auth/presentation/onboarding_screen.dart';
 
 import '../../../helpers/test_helpers.dart';
 
@@ -16,7 +16,7 @@ void main() {
       testWidgets('shows first page content initially', (tester) async {
         await tester.pumpWidget(buildOnboardingScreen());
 
-        expect(find.text('Welcome to Zlynkr'), findsOneWidget);
+        expect(find.text('Welcome to Icos'), findsOneWidget);
         expect(
           find.textContaining('Guide the snake'),
           findsOneWidget,
@@ -116,7 +116,7 @@ void main() {
         );
         await tester.pumpAndSettle();
 
-        expect(find.text('Welcome to Zlynkr'), findsOneWidget);
+        expect(find.text('Welcome to Icos'), findsOneWidget);
       });
     });
 
@@ -175,7 +175,7 @@ void main() {
 
         // Animated illustrations use CustomPaint instead of Icon widgets
         expect(find.byType(CustomPaint), findsWidgets);
-        expect(find.text('Welcome to Zlynkr'), findsOneWidget);
+        expect(find.text('Welcome to Icos'), findsOneWidget);
       });
 
       testWidgets('second page has animated illustration', (tester) async {

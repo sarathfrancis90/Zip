@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/auth/domain/auth_strategy.dart';
+import 'package:icos/features/auth/domain/auth_strategy.dart';
 
 void main() {
   group('AuthStrategy.forOAuth', () {
@@ -312,6 +312,6 @@ void main() {
   });
 
   test('redirect uri matches the registered scheme', () {
-    expect(kAuthRedirectUri, 'io.supabase.zlynkr://login-callback');
+    expect(kAuthRedirectUri, 'io.supabase.icos://login-callback');
   });
 }

@@ -20,7 +20,7 @@ abstract final class GroupNameValidator {
   static const List<String> _blockedWords = [
     'admin',
     'moderator',
-    'zlynkr',
+    'icos',
     'support',
   ];
 

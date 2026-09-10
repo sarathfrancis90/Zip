@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/domain/models/game_state.dart';
-import 'package:zlynkr/features/puzzle/presentation/widgets/game_controls.dart';
+import 'package:icos/features/puzzle/domain/models/game_state.dart';
+import 'package:icos/features/puzzle/presentation/widgets/game_controls.dart';
 
 import '../../../../helpers/test_helpers.dart';
 

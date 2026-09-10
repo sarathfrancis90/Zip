@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/data/fallback_selector.dart';
-import 'package:zlynkr/features/puzzle/domain/solver/puzzle_core.dart'
+import 'package:icos/features/puzzle/data/fallback_selector.dart';
+import 'package:icos/features/puzzle/domain/solver/puzzle_core.dart'
     show fnv1a32, weekdayDifficulty;
 
 void main() {

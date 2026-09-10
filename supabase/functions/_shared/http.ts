@@ -1,4 +1,4 @@
-// Shared HTTP helpers for Zlynkr edge functions.
+// Shared HTTP helpers for Icos edge functions.
 //
 // - CORS + JSON responses
 // - Structured JSON logger with a correlation id (from `x-correlation-id` or a

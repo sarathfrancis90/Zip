@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/constants/app_strings.dart';
-import 'package:zlynkr/features/groups/domain/models/group.dart';
-import 'package:zlynkr/features/groups/presentation/groups_screen.dart';
-import 'package:zlynkr/features/groups/presentation/widgets/account_required_card.dart';
-import 'package:zlynkr/features/groups/providers/groups_provider.dart';
+import 'package:icos/core/constants/app_strings.dart';
+import 'package:icos/features/groups/domain/models/group.dart';
+import 'package:icos/features/groups/presentation/groups_screen.dart';
+import 'package:icos/features/groups/presentation/widgets/account_required_card.dart';
+import 'package:icos/features/groups/providers/groups_provider.dart';
 
 import '../../../helpers/test_helpers.dart';
 

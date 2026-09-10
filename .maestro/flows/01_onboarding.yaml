@@ -1,6 +1,6 @@
 # Flow 01: Onboarding - First Launch Experience
 # Verifies all 3 onboarding pages render correctly with proper content.
-appId: com.zlynkr.zlynkr
+appId: com.icos.game
 
 ---
 
@@ -10,7 +10,7 @@ appId: com.zlynkr.zlynkr
 
 # -- Page 1: Welcome --
 - assertVisible:
-    text: "Welcome to Zlynkr.*"
+    text: "Welcome to Icos.*"
 - assertVisible: "Skip"
 - assertVisible: "Next"
 - takeScreenshot: 01_onboarding/page1_welcome
@@ -38,7 +38,7 @@ appId: com.zlynkr.zlynkr
     direction: RIGHT
 - waitForAnimationToEnd
 - assertVisible:
-    text: "Welcome to Zlynkr.*"
+    text: "Welcome to Icos.*"
 - takeScreenshot: 01_onboarding/page1_after_swipe_back
 
 # -- Skip button takes to home --

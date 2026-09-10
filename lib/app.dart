@@ -11,14 +11,14 @@ import 'core/utils/date_utils.dart';
 import 'features/puzzle/providers/daily_puzzle_provider.dart';
 import 'features/puzzle/providers/puzzle_result_provider.dart';
 
-class ZlynkrApp extends ConsumerStatefulWidget {
-  const ZlynkrApp({super.key});
+class IcosApp extends ConsumerStatefulWidget {
+  const IcosApp({super.key});
 
   @override
-  ConsumerState<ZlynkrApp> createState() => _ZlynkrAppState();
+  ConsumerState<IcosApp> createState() => _IcosAppState();
 }
 
-class _ZlynkrAppState extends ConsumerState<ZlynkrApp>
+class _IcosAppState extends ConsumerState<IcosApp>
     with WidgetsBindingObserver {
   String _lastKnownDate = AppDateUtils.todayUtc();
 
@@ -63,7 +63,7 @@ class _ZlynkrAppState extends ConsumerState<ZlynkrApp>
     final themeMode = ref.watch(themeModeNotifierProvider);
 
     return MaterialApp.router(
-      title: 'Zlynkr',
+      title: 'Icos',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

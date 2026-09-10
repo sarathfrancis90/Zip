@@ -1,6 +1,6 @@
 # Flow 06: Stats Screen
 # Verifies all stats elements: streaks, calendar, time distribution.
-appId: com.zlynkr.zlynkr
+appId: com.icos.game
 
 ---
 

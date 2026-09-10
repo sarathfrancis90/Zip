@@ -56,7 +56,7 @@ class ShareCardWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  'Zlynkr',
+                  'Icos',
                   style: TextStyle(
                     color: AppColors.textPrimaryDark,
                     fontSize: 20,

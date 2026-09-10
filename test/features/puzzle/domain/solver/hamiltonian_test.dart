@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/domain/solver/puzzle_core.dart';
+import 'package:icos/features/puzzle/domain/solver/puzzle_core.dart';
 
 void expectHamiltonian(int size, Set<int> walls, List<int>? path) {
   expect(path, isNotNull);

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/domain/models/game_state.dart';
-import 'package:zlynkr/features/puzzle/presentation/widgets/grid_palette.dart';
-import 'package:zlynkr/features/puzzle/presentation/widgets/puzzle_grid.dart';
-import 'package:zlynkr/features/puzzle/providers/colorblind_mode_provider.dart';
+import 'package:icos/features/puzzle/domain/models/game_state.dart';
+import 'package:icos/features/puzzle/presentation/widgets/grid_palette.dart';
+import 'package:icos/features/puzzle/presentation/widgets/puzzle_grid.dart';
+import 'package:icos/features/puzzle/providers/colorblind_mode_provider.dart';
 
 import '../../../../helpers/test_helpers.dart';
 

@@ -103,7 +103,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
 
     return json(payload, 200, {
       [CORRELATION_HEADER]: correlationId,
-      "Content-Disposition": `attachment; filename="zlynkr-export-${user.id}.json"`,
+      "Content-Disposition": `attachment; filename="icos-export-${user.id}.json"`,
     });
   } catch (err) {
     log.error("unhandled error", errorFields(err));

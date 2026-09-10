@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/utils/app_error.dart';
-import 'package:zlynkr/features/groups/data/group_parsers.dart';
-import 'package:zlynkr/features/groups/domain/models/group.dart';
+import 'package:icos/core/utils/app_error.dart';
+import 'package:icos/features/groups/data/group_parsers.dart';
+import 'package:icos/features/groups/domain/models/group.dart';
 
 const _groupJson = {
   'id': 'g-1',

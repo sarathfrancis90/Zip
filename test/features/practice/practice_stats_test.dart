@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/services/storage_service.dart';
-import 'package:zlynkr/features/practice/providers/practice_provider.dart';
+import 'package:icos/core/services/storage_service.dart';
+import 'package:icos/features/practice/providers/practice_provider.dart';
 
 import '../../helpers/storage_test_helpers.dart';
 

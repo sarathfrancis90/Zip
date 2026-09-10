@@ -1,6 +1,6 @@
-# Zlynkr
+# Icos
 
-Zlynkr — Feed the Path. A daily snake puzzle game.
+Icos — Feed the Path. A daily snake puzzle game.
 
 ## Getting Started
 

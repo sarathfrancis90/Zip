@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/domain/game_engine.dart';
-import 'package:zlynkr/features/puzzle/domain/models/game_state.dart';
-import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
+import 'package:icos/features/puzzle/domain/game_engine.dart';
+import 'package:icos/features/puzzle/domain/models/game_state.dart';
+import 'package:icos/features/puzzle/domain/models/puzzle.dart';
 
 void main() {
   // Standard 3x3 test puzzle (no walls):

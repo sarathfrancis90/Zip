@@ -1,5 +1,5 @@
 /**
- * Zlynkr puzzle core — shared Hamiltonian-path puzzle algorithm.
+ * Icos puzzle core — shared Hamiltonian-path puzzle algorithm.
  *
  * A puzzle is an NxN grid with some wall cells. The player draws ONE
  * continuous 4-adjacent path that visits every non-wall ("open") cell exactly

@@ -67,7 +67,7 @@ Future<void> shareResultFromHome(
     final bytes =
         entry == null ? null : await ShareCardGenerator.captureFromWidget(key);
     if (bytes != null) {
-      final name = 'zlynkr-${result.date}.png';
+      final name = 'icos-${result.date}.png';
       await Share.shareXFiles(
         [XFile.fromData(bytes, mimeType: 'image/png', name: name)],
         text: text,

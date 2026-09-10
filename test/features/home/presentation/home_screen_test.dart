@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/constants/app_strings.dart';
-import 'package:zlynkr/features/home/presentation/home_screen.dart';
-import 'package:zlynkr/features/puzzle/data/submission_result.dart';
-import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
-import 'package:zlynkr/features/puzzle/providers/daily_puzzle_provider.dart';
-import 'package:zlynkr/features/puzzle/providers/puzzle_result_provider.dart';
-import 'package:zlynkr/features/stats/domain/models/streak.dart';
-import 'package:zlynkr/features/stats/providers/stats_provider.dart';
+import 'package:icos/core/constants/app_strings.dart';
+import 'package:icos/features/home/presentation/home_screen.dart';
+import 'package:icos/features/puzzle/data/submission_result.dart';
+import 'package:icos/features/puzzle/domain/models/puzzle.dart';
+import 'package:icos/features/puzzle/providers/daily_puzzle_provider.dart';
+import 'package:icos/features/puzzle/providers/puzzle_result_provider.dart';
+import 'package:icos/features/stats/domain/models/streak.dart';
+import 'package:icos/features/stats/providers/stats_provider.dart';
 
 import '../../../helpers/test_helpers.dart';
 
@@ -69,7 +69,7 @@ void main() {
     }
 
     group('Header content', () {
-      testWidgets('shows app name "Zlynkr"', (tester) async {
+      testWidgets('shows app name "Icos"', (tester) async {
         await tester.pumpWidget(buildHomeScreen());
         await tester.pumpAndSettle();
 

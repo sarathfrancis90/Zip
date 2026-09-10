@@ -1,10 +1,10 @@
-# Zlynkr (formerly ZipPath) - Project Context for AI Agents
+# Icos (formerly ZipPath) - Project Context for AI Agents
 
 _Critical rules and patterns that AI agents must follow when implementing code. Focus on unobvious details that agents might otherwise miss._
 
 ## Project Overview
 
-Zlynkr (Dart package `zlynkr`, bundle id `com.zlynkr.zlynkr`; planning docs still say "ZipPath") is a cross-platform mobile puzzle game (iOS + Android) built with Flutter. Players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. One puzzle per day, same for all users worldwide. Difficulty scales Monday (5x5 easy) to Sunday (8x8 hard).
+Icos (Dart package `icos`, bundle id `com.icos.game`; planning docs still say "ZipPath") is a cross-platform mobile puzzle game (iOS + Android) built with Flutter. Players draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. One puzzle per day, same for all users worldwide. Difficulty scales Monday (5x5 easy) to Sunday (8x8 hard).
 
 ## Technology Stack & Versions
 

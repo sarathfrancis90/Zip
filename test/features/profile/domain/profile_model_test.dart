@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/profile/data/profile_repository.dart';
-import 'package:zlynkr/features/profile/domain/models/profile.dart';
+import 'package:icos/features/profile/data/profile_repository.dart';
+import 'package:icos/features/profile/domain/models/profile.dart';
 
 void main() {
   group('UserProfile.fromJson', () {

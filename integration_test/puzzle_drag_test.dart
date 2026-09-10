@@ -3,11 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
-import 'package:zlynkr/core/constants/app_colors.dart';
-import 'package:zlynkr/features/puzzle/domain/game_engine.dart';
-import 'package:zlynkr/features/puzzle/domain/models/game_state.dart';
-import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
-import 'package:zlynkr/features/puzzle/presentation/widgets/puzzle_grid.dart';
+import 'package:icos/core/constants/app_colors.dart';
+import 'package:icos/features/puzzle/domain/game_engine.dart';
+import 'package:icos/features/puzzle/domain/models/game_state.dart';
+import 'package:icos/features/puzzle/domain/models/puzzle.dart';
+import 'package:icos/features/puzzle/presentation/widgets/puzzle_grid.dart';
 
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();

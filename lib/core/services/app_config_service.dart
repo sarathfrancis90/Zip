@@ -29,8 +29,8 @@ class AppConfig {
   final Map<String, String> storeUrls;
 
   static const androidPlayStoreFallback =
-      'https://play.google.com/store/apps/details?id=com.zlynkr.app';
-  static const iosAppStoreFallback = 'https://apps.apple.com/app/zlynkr';
+      'https://play.google.com/store/apps/details?id=com.icos.app';
+  static const iosAppStoreFallback = 'https://apps.apple.com/app/icos';
 
   /// Store URL for the current platform (or [platformOverride] in tests).
   String storeUrlFor([String? platformOverride]) {

@@ -116,7 +116,7 @@ abstract final class ProfanityFilter {
     'administrator',
     'moderator',
     'mod',
-    'zlynkr',
+    'icos',
     'support',
     'official',
     'staff',
@@ -194,8 +194,9 @@ abstract final class ProfanityFilter {
     for (final word in words) {
       if (reservedWords.contains(word)) return true;
     }
-    // "zlynkr" anywhere (e.g. "zlynkrbot") is also impersonation.
-    return normalized.contains('zlynkr');
+    // Names that *start* with the brand (e.g. "icosbot", "icos official")
+    // impersonate us; a substring match would wrongly block "Nicos".
+    return normalized.startsWith('icos');
   }
 
   /// True when the text is blocked for any reason (profanity or reserved).

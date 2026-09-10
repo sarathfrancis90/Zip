@@ -38,7 +38,7 @@ class ShareCardGenerator {
     final hintStr = hintsUsed == 0 ? 'No hints' : '$hintsUsed hint${hintsUsed > 1 ? 's' : ''}';
 
     final buffer = StringBuffer()
-      ..writeln('Zlynkr $label')
+      ..writeln('Icos $label')
       ..writeln('${gridSize}x$gridSize ${difficulty[0].toUpperCase()}${difficulty.substring(1)}')
       ..writeln('$timeStr · $hintStr')
       ..writeln(underPar ? '⭐ Under Par!' : '✅ Solved!');

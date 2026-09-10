@@ -299,7 +299,7 @@ class ProfileNotifier extends _$ProfileNotifier {
               .replaceAll(':', '-')
               .split('.')
               .first;
-          final file = File('${dir.path}/zlynkr-export-$stamp.json');
+          final file = File('${dir.path}/icos-export-$stamp.json');
           await file.writeAsString(
             const JsonEncoder.withIndent('  ').convert(data),
           );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/services/connectivity_service.dart';
-import 'package:zlynkr/core/services/sync_service.dart';
-import 'package:zlynkr/shared/widgets/offline_banner.dart';
+import 'package:icos/core/services/connectivity_service.dart';
+import 'package:icos/core/services/sync_service.dart';
+import 'package:icos/shared/widgets/offline_banner.dart';
 
 import '../../helpers/test_helpers.dart';
 

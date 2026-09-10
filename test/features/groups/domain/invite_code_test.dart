@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/groups/domain/group_name_validator.dart';
-import 'package:zlynkr/features/groups/domain/invite_code.dart';
+import 'package:icos/features/groups/domain/group_name_validator.dart';
+import 'package:icos/features/groups/domain/invite_code.dart';
 
 void main() {
   group('InviteCode', () {
@@ -31,7 +31,7 @@ void main() {
     });
 
     test('joinLink builds the public deep link', () {
-      expect(InviteCode.joinLink('abc123'), 'https://zlynkr.app/join/ABC123');
+      expect(InviteCode.joinLink('abc123'), 'https://icos.app/join/ABC123');
     });
   });
 

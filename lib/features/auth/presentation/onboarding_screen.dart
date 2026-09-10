@@ -21,7 +21,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int _currentPage = 0;
 
   static const _titles = [
-    'Welcome to Zlynkr',
+    'Welcome to Icos',
     'One Puzzle Per Day',
     'Compete with Friends',
   ];

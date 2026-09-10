@@ -37,7 +37,7 @@ enum EmailMethod {
 }
 
 /// Redirect used for all web OAuth / linkIdentity flows.
-const String kAuthRedirectUri = 'io.supabase.zlynkr://login-callback';
+const String kAuthRedirectUri = 'io.supabase.icos://login-callback';
 
 abstract final class AuthStrategy {
   /// Decides how to handle an OAuth button press.

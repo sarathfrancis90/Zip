@@ -1,15 +1,15 @@
 ============================================================
-  ZLYNKR - Google Play Store Listing (Closed Testing)
+  ICOS - Google Play Store Listing (Closed Testing)
 ============================================================
 
 APP TITLE (30 char max):
-Zlynkr - Daily Path Puzzle
+Icos - Daily Path Puzzle
 
 SHORT DESCRIPTION (80 char max):
 Draw a path, connect waypoints, fill every cell. One new puzzle every day.
 
 FULL DESCRIPTION (4000 char max):
-Zlynkr is a daily snake puzzle game that challenges you to draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. Simple rules, deep strategy.
+Icos is a daily snake puzzle game that challenges you to draw a continuous path through a grid, connecting numbered waypoints in order while filling every cell. Simple rules, deep strategy.
 
 HOW TO PLAY
 Start at waypoint 1 and draw your path through the grid. Visit each numbered waypoint in sequence. Your goal: fill every cell with no gaps. Sounds easy? The grid has walls, tight turns, and tricky layouts that will make you think twice.
@@ -36,7 +36,7 @@ Solve a puzzle every day to build your streak. Miss a day? Use a streak freeze t
 FREE TO PLAY
 No ads. No paywalls. Just pure puzzle fun, one grid at a time.
 
-Download Zlynkr and start your streak today.
+Download Icos and start your streak today.
 
 ------------------------------------------------------------
 
@@ -56,7 +56,7 @@ sarathfrancis90@gmail.com
 ------------------------------------------------------------
 
 ASSETS CHECKLIST:
-[x] App bundle (.aab)         -> zlynkr-v1.0.0.aab
+[x] App bundle (.aab)         -> icos-v1.0.0.aab
 [x] Feature graphic (1024x500) -> feature_graphic.png
 [x] Hi-res icon (512x512)     -> hi_res_icon_512.png
 [x] Phone screenshots (min 2)  -> screenshots/01-07_*.png

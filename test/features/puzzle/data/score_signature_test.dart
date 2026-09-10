@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/data/score_signature.dart';
+import 'package:icos/features/puzzle/data/score_signature.dart';
 
 void main() {
   group('computeScoreSignature', () {

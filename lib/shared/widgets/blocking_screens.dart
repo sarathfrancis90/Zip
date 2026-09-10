@@ -34,9 +34,9 @@ class ForceUpdateScreen extends StatelessWidget {
       iconColor: AppColors.purpleLight,
       title: 'Update required',
       message: latestVersion != null
-          ? 'A new version ($latestVersion) of Zlynkr is available. '
+          ? 'A new version ($latestVersion) of Icos is available. '
               'Please update to keep playing.'
-          : 'A new version of Zlynkr is available. Please update to keep playing.',
+          : 'A new version of Icos is available. Please update to keep playing.',
       action: FilledButton.icon(
         onPressed: _openStore,
         icon: const Icon(Icons.open_in_new_rounded),
@@ -60,7 +60,7 @@ class MaintenanceScreen extends StatelessWidget {
       iconColor: AppColors.warning,
       title: 'Back soon',
       message: message ??
-          'Zlynkr is undergoing scheduled maintenance. '
+          'Icos is undergoing scheduled maintenance. '
               'Please check back in a little while.',
       action: onRetry != null
           ? OutlinedButton.icon(
@@ -79,13 +79,13 @@ class BannedScreen extends StatelessWidget {
 
   final VoidCallback? onSignOut;
 
-  static const supportEmail = 'support@zlynkr.app';
+  static const supportEmail = 'support@icos.app';
 
   Future<void> _contactSupport() async {
     final uri = Uri(
       scheme: 'mailto',
       path: supportEmail,
-      queryParameters: {'subject': 'Zlynkr account appeal'},
+      queryParameters: {'subject': 'Icos account appeal'},
     );
     try {
       await launchUrl(uri);
@@ -100,7 +100,7 @@ class BannedScreen extends StatelessWidget {
       icon: Icons.block_rounded,
       iconColor: AppColors.error,
       title: 'Account suspended',
-      message: 'This account has been suspended for violating the Zlynkr '
+      message: 'This account has been suspended for violating the Icos '
           'community guidelines. If you believe this is a mistake, contact '
           '$supportEmail.',
       action: Column(

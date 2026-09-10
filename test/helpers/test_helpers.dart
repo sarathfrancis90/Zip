@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zlynkr/core/theme/app_theme.dart';
-import 'package:zlynkr/features/puzzle/domain/models/game_state.dart';
-import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
+import 'package:icos/core/theme/app_theme.dart';
+import 'package:icos/features/puzzle/domain/models/game_state.dart';
+import 'package:icos/features/puzzle/domain/models/puzzle.dart';
 
 /// Call this at the top of each test file's main() to set up GoogleFonts
 /// for testing (fonts won't be fetched at runtime in tests).

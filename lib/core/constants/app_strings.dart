@@ -1,6 +1,6 @@
 abstract final class AppStrings {
-  static const appName = 'Zlynkr';
-  static const appTagline = 'Feed the Path';
+  static const appName = 'Icos';
+  static const appTagline = 'One line. Every cell.';
 
   // Navigation
   static const navHome = 'Home';
@@ -55,8 +55,8 @@ abstract final class AppStrings {
   static const streakFreeze = 'Streak Freeze';
 
   // Share
-  static const shareTitle = 'Zlynkr';
-  static const shareMessage = 'I solved today\'s Zlynkr in';
+  static const shareTitle = 'Icos';
+  static const shareMessage = 'I solved today\'s Icos in';
 
   // Errors
   static const errorGeneric = 'Something went wrong. Please try again.';

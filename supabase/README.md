@@ -1,4 +1,4 @@
-# Zlynkr Supabase backend
+# Icos Supabase backend
 
 Postgres schema (migrations), Deno edge functions, pg_cron jobs and an RLS smoke
 test. Design contract: `docs/superpowers/specs/2026-09-09-production-readiness-design.md`
@@ -28,7 +28,7 @@ supabase db reset              # applies every migration + seed.sql
 supabase status                # prints URL, keys, DATABASE_URL
 
 # RLS smoke test (inserts into auth.users -> LOCAL ONLY). psql is not required:
-docker exec -i supabase_db_zlynkr psql -U postgres -d postgres -v ON_ERROR_STOP=1 \
+docker exec -i supabase_db_icos psql -U postgres -d postgres -v ON_ERROR_STOP=1 \
   < supabase/tests/rls_smoke.sql
 # or, with psql installed:
 psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/tests/rls_smoke.sql

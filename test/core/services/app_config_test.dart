@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/services/app_config_service.dart';
-import 'package:zlynkr/firebase_options.dart';
+import 'package:icos/core/services/app_config_service.dart';
+import 'package:icos/firebase_options.dart';
 
 void main() {
   group('AppConfig.compareVersions', () {

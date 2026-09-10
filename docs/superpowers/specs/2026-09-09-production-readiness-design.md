@@ -1,11 +1,11 @@
-# Zlynkr Production Readiness — Design Spec
+# Icos Production Readiness — Design Spec
 
 Date: 2026-09-09
 Status: approved for autonomous execution (user requested a fully autonomous end-to-end pass)
 
 ## 1. Goal
 
-Take the existing Zlynkr Flutter + Supabase daily Hamiltonian-path puzzle game from
+Take the existing Icos Flutter + Supabase daily Hamiltonian-path puzzle game from
 "works in a demo" to "submittable to Google Play and the App Store", with a
 best-in-class puzzle engine (unique solutions, measured difficulty, deterministic
 generation), hardened backend, complete social features (groups, leaderboards,

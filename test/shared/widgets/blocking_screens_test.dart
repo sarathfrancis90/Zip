@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/theme/app_theme.dart';
-import 'package:zlynkr/shared/widgets/blocking_screens.dart';
+import 'package:icos/core/theme/app_theme.dart';
+import 'package:icos/shared/widgets/blocking_screens.dart';
 
 import '../../helpers/test_helpers.dart';
 

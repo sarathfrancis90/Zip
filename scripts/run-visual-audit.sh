@@ -1,6 +1,6 @@
 #!/bin/bash
 # =============================================================================
-# Zlynkr Visual E2E Audit Runner
+# Icos Visual E2E Audit Runner
 # =============================================================================
 #
 # This script runs the full Maestro visual audit suite against the running app.

@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/domain/solver/puzzle_core.dart';
+import 'package:icos/features/puzzle/domain/solver/puzzle_core.dart';
 
 /// Cross-implementation parity: the TypeScript core writes
 /// `supabase/functions/_shared/fixtures/puzzle_parity.json`; this test checks

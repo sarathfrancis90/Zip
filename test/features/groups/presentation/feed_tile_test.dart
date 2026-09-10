@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/groups/domain/models/group.dart';
-import 'package:zlynkr/features/groups/presentation/widgets/feed_tile.dart';
+import 'package:icos/features/groups/domain/models/group.dart';
+import 'package:icos/features/groups/presentation/widgets/feed_tile.dart';
 
 GroupFeedEvent _event(String event, {String? puzzleDate, int? timeSeconds}) =>
     GroupFeedEvent(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/presentation/widgets/celebration_overlay.dart';
+import 'package:icos/features/puzzle/presentation/widgets/celebration_overlay.dart';
 
 import '../../../../helpers/test_helpers.dart';
 

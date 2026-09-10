@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/features/puzzle/domain/models/puzzle.dart';
-import 'package:zlynkr/features/puzzle/domain/solver/puzzle_core.dart';
+import 'package:icos/features/puzzle/domain/models/puzzle.dart';
+import 'package:icos/features/puzzle/domain/solver/puzzle_core.dart';
 
 void expectValidGenerated(GeneratedPuzzle p, DifficultyParams params) {
   expect(p.gridSize, params.gridSize);

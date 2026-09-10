@@ -1,6 +1,6 @@
-# Zlynkr Release Runbook
+# Icos Release Runbook
 
-Every manual step required to ship Zlynkr (`com.zlynkr.zlynkr`) to the App Store and
+Every manual step required to ship Icos (`com.icos.game`) to the App Store and
 Google Play, in the order to do them. Automated steps live in `.github/workflows/`,
 `android/fastlane/` and `ios/fastlane/`; this document covers only what a human must do.
 
@@ -10,12 +10,12 @@ recurs per release.
 ---
 
 
-> **Status 2026-09-09:** The Supabase project **`zlynkr`** (ref `pdvgddvubxldjnemdkok`, us-east-1,
+> **Status 2026-09-09:** The Supabase project **`icos`** (ref `pdvgddvubxldjnemdkok`, us-east-1,
 > org "Francis Org") is LIVE with all 21 migrations applied, all 5 edge functions deployed,
 > `PUZZLE_SEED_SALT` set, Vault entries (`project_url`, `service_role_key`) created, anonymous
 > sign-ins + email/password enabled (email confirmations currently OFF for testing — turn them on
 > in `supabase/config.toml` `[auth.email] enable_confirmations = true` and `supabase config push`
-> before launch), the app-scheme redirect `io.supabase.zlynkr://login-callback` registered, and
+> before launch), the app-scheme redirect `io.supabase.icos://login-callback` registered, and
 > 16 days of puzzles seeded (2026-09-08 → 2026-09-23). `.env.development` / `.env.production`
 > already point at it. Migrations were applied through the Supabase MCP, so before the first
 > `supabase db push` run `supabase link --project-ref pdvgddvubxldjnemdkok` and then
@@ -32,16 +32,16 @@ recurs per release.
 - [ ] CocoaPods specs up to date: `cd ios && pod repo update && pod install` (first iOS build after the Firebase/notification plugins were added needs this)
 - [ ] Ruby 3.3 + Bundler: `bundle install` at the repo root installs fastlane and CocoaPods
 - [ ] Deno 2.x (`brew install deno`) and the Supabase CLI (`brew install supabase/tap/supabase`)
-- [ ] Access to: Apple Developer Program, Google Play Console, Supabase org, Firebase (optional), DNS for `zlynkr.app`, this GitHub repo's Settings > Secrets
+- [ ] Access to: Apple Developer Program, Google Play Console, Supabase org, Firebase (optional), DNS for `icos.app`, this GitHub repo's Settings > Secrets
 
 ---
 
-## 1. Domain: `zlynkr.app` (needed before universal links / app links verify)
+## 1. Domain: `icos.app` (needed before universal links / app links verify)
 
 The `docs/` folder is a static site (landing page, privacy policy, terms, `.well-known`).
 
 - [ ] **(once)** GitHub repo > Settings > Pages > Source: *Deploy from a branch*, branch `main`, folder `/docs`
-- [ ] **(once)** Custom domain: `zlynkr.app`; tick *Enforce HTTPS* (wait for the certificate)
+- [ ] **(once)** Custom domain: `icos.app`; tick *Enforce HTTPS* (wait for the certificate)
 - [ ] **(once)** DNS at your registrar: `A` records for the apex to GitHub Pages IPs
       (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and a
       `CNAME` for `www` to `<github-user>.github.io`
@@ -53,11 +53,11 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
     not the upload key. Add the upload-key fingerprint as a second array entry if you side-load release builds.
 - [ ] Verify after deploy:
   ```bash
-  curl -sI https://zlynkr.app/.well-known/apple-app-site-association | grep -i content-type   # must be JSON, no redirect
-  curl -s https://zlynkr.app/.well-known/assetlinks.json | python3 -m json.tool
+  curl -sI https://icos.app/.well-known/apple-app-site-association | grep -i content-type   # must be JSON, no redirect
+  curl -s https://icos.app/.well-known/assetlinks.json | python3 -m json.tool
   ```
   Then check with https://developer.android.com/training/app-links/verify-android-applinks and
-  https://app-site-association.cdn-apple.com/a/v1/zlynkr.app (Apple CDN cache, can take up to 24h).
+  https://app-site-association.cdn-apple.com/a/v1/icos.app (Apple CDN cache, can take up to 24h).
 
 ---
 
@@ -84,8 +84,8 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
   - Enable **Anonymous sign-ins**
   - **Email**: enable; disable "Confirm email" only if you want frictionless upgrade (recommended: keep confirmation on)
   - **Google**: Client ID = the *Web* client ID, Client secret = its secret (from step 5); add the iOS client ID to *Authorized Client IDs*
-  - **Apple**: Services ID + Team ID + Key ID + private key (`.p8`) from step 3; also list the bundle id `com.zlynkr.zlynkr` in *Authorized Client IDs*
-- [ ] **(once)** Authentication > URL Configuration > *Redirect URLs*: add `io.supabase.zlynkr://login-callback` and `https://zlynkr.app/*`
+  - **Apple**: Services ID + Team ID + Key ID + private key (`.p8`) from step 3; also list the bundle id `com.icos.game` in *Authorized Client IDs*
+- [ ] **(once)** Authentication > URL Configuration > *Redirect URLs*: add `io.supabase.icos://login-callback` and `https://icos.app/*`
 - [ ] **(once)** Database > Replication (Realtime): enable the `group_feed` table (and any other table the client subscribes to)
 - [ ] **(once)** Copy **Project URL** and **anon key** (Project Settings > API) into `.env.production` locally and into GitHub secrets `SUPABASE_URL` / `SUPABASE_ANON_KEY`; copy the **service_role** key into `SUPABASE_SERVICE_ROLE_KEY` (GitHub only, never in the app)
 - [ ] Seed the first two weeks of puzzles: run the *Generate daily puzzles* workflow manually (Actions > Generate daily puzzles > Run workflow), or locally:
@@ -99,11 +99,11 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
 ## 3. Apple Developer + App Store Connect
 
 - [ ] **(once)** Enrol in the Apple Developer Program (Individual or Organisation). Note the **Team ID** (Membership page, 10 chars) -> secret `APPLE_TEAM_ID`
-- [ ] **(once)** Certificates, IDs & Profiles > Identifiers > **App ID** `com.zlynkr.zlynkr` (explicit) with capabilities:
+- [ ] **(once)** Certificates, IDs & Profiles > Identifiers > **App ID** `com.icos.game` (explicit) with capabilities:
   - Associated Domains
   - Push Notifications
   - Sign in with Apple
-- [ ] **(once)** Identifiers > **Services ID** (e.g. `com.zlynkr.zlynkr.signin`) with Sign in with Apple enabled;
+- [ ] **(once)** Identifiers > **Services ID** (e.g. `com.icos.game.signin`) with Sign in with Apple enabled;
       configure it with domain `<PROJECT_REF>.supabase.co` and return URL `https://<PROJECT_REF>.supabase.co/auth/v1/callback`
 - [ ] **(once)** Keys > **Sign in with Apple key** (`.p8`): note Key ID; upload to Supabase Apple provider (step 2)
 - [ ] **(once)** Keys > **APNs key** (`.p8`, "Apple Push Notifications service"): upload to Firebase > Project settings > Cloud Messaging > Apple app configuration (step 5). Skip if not using push
@@ -112,13 +112,13 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
       - Key ID -> secret `ASC_KEY_ID`
       - Issuer ID -> secret `ASC_ISSUER_ID`
       - `base64 -i AuthKey_XXXX.p8 | pbcopy` -> secret `ASC_KEY_P8_BASE64`
-- [ ] **(once)** App Store Connect > Apps > **+ New App**: iOS, name *Zlynkr*, primary language English (U.S.), bundle ID `com.zlynkr.zlynkr`, SKU `zlynkr-ios`.
+- [ ] **(once)** App Store Connect > Apps > **+ New App**: iOS, name *Icos*, primary language English (U.S.), bundle ID `com.icos.game`, SKU `icos-ios`.
       Note the **ITC team ID** (visible in the URL of https://appstoreconnect.apple.com/access/users or via `fastlane spaceship`) -> secret `APPLE_ITC_TEAM_ID`. Your Apple account email -> secret `APPLE_ID`
 - [ ] **(once)** Code signing via **match**:
   ```bash
-  # 1. create a PRIVATE git repo, e.g. github.com/<you>/zlynkr-certificates
+  # 1. create a PRIVATE git repo, e.g. github.com/<you>/icos-certificates
   # 2. from the repo root:
-  export MATCH_GIT_URL=git@github.com:<you>/zlynkr-certificates.git
+  export MATCH_GIT_URL=git@github.com:<you>/icos-certificates.git
   export MATCH_PASSWORD='<strong passphrase>'          # -> secret MATCH_PASSWORD
   export APPLE_TEAM_ID=<TEAM_ID> APPLE_ITC_TEAM_ID=<ITC_ID> APPLE_ID=<email>
   cd ios && bundle exec fastlane match appstore        # creates distribution cert + App Store profile
@@ -132,7 +132,7 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
   - Email Address, User ID, Gameplay Content: linked to identity, app functionality, no tracking
   - Crash Data, Performance Data, Product Interaction: not linked, analytics/app functionality, no tracking
   - Tracking: **No**
-- [ ] **(once)** App Information: Privacy Policy URL `https://zlynkr.app/privacy-policy.html`, category *Games > Puzzle*, age rating questionnaire (expect 4+), content rights
+- [ ] **(once)** App Information: Privacy Policy URL `https://icos.app/privacy-policy.html`, category *Games > Puzzle*, age rating questionnaire (expect 4+), content rights
 - [ ] **(once)** Sign in with Apple review requirement: because the app offers Google sign-in it **must** also offer Sign in with Apple (it does); keep both visible on the sign-in screen
 - [ ] Per release: bump `version:` in `pubspec.yaml` (`1.0.0+3` -> build number must be higher than the last upload), commit, tag `vX.Y.Z`, push the tag. `deploy-ios.yml` uploads to TestFlight
 - [ ] Per release: TestFlight > add the build to a test group (internal testers need no review; external testers require a short beta review)
@@ -150,28 +150,28 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
 - [ ] **(once)** Create the upload keystore (keep it and the passwords in a password manager; losing it means a new app listing):
   ```bash
   keytool -genkey -v \
-    -keystore ~/zlynkr-upload-keystore.jks \
+    -keystore ~/icos-upload-keystore.jks \
     -keyalg RSA -keysize 2048 -validity 10000 \
     -alias upload \
-    -dname "CN=Zlynkr, OU=Mobile, O=Zlynkr, L=City, ST=State, C=US"
+    -dname "CN=Icos, OU=Mobile, O=Icos, L=City, ST=State, C=US"
   ```
   Then locally create `android/key.properties` (git-ignored):
   ```
   storePassword=<store password>
   keyPassword=<key password>
   keyAlias=upload
-  storeFile=/Users/<you>/zlynkr-upload-keystore.jks
+  storeFile=/Users/<you>/icos-upload-keystore.jks
   ```
-  GitHub secrets: `ANDROID_KEYSTORE_BASE64` = `base64 -i ~/zlynkr-upload-keystore.jks | pbcopy`,
+  GitHub secrets: `ANDROID_KEYSTORE_BASE64` = `base64 -i ~/icos-upload-keystore.jks | pbcopy`,
   `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_PASSWORD`, `ANDROID_KEY_ALIAS` (= `upload`)
-- [ ] **(once)** Play Console > **Create app**: name *Zlynkr*, default language English (US), App, Free
+- [ ] **(once)** Play Console > **Create app**: name *Icos*, default language English (US), App, Free
 - [ ] **(once)** Setup > **App signing**: accept *Play App Signing* (Google holds the signing key; you keep the upload key). After the first upload, copy the *App signing key certificate* SHA-256 into `docs/.well-known/assetlinks.json` (step 1)
-- [ ] **(once)** Service account for fastlane: Google Cloud Console > IAM > Service accounts > create `zlynkr-play-publisher`, create a **JSON key**;
+- [ ] **(once)** Service account for fastlane: Google Cloud Console > IAM > Service accounts > create `icos-play-publisher`, create a **JSON key**;
       Play Console > Users and permissions > Invite new users > paste the service-account email with *Release manager* rights (or app-level: Release to production, Manage testing tracks).
       Secret `PLAY_STORE_CREDENTIALS` = `base64 -i service-account.json | pbcopy`. Locally save it as `android/play-store-credentials.json` (git-ignored)
 - [ ] **(once)** First upload **must be manual** (fastlane cannot create the first release): build locally (section 7) and upload the AAB to *Internal testing* in the console
 - [ ] **(once)** Policy > App content, answer every item:
-  - Privacy policy: `https://zlynkr.app/privacy-policy.html`
+  - Privacy policy: `https://icos.app/privacy-policy.html`
   - Ads: No
   - App access: all functionality available without special access (guest mode) — provide a test account anyway
   - Content rating questionnaire (IARC): Game > Puzzle; no violence/gambling/user-generated *media*; expect *Everyone*
@@ -203,11 +203,11 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
 
 ## 5. Google Cloud OAuth (Google Sign-In) — required for the Google provider
 
-- [ ] **(once)** Google Cloud Console > APIs & Services > OAuth consent screen: External, app name Zlynkr, support email, privacy policy URL, scopes `email`, `profile`, `openid`; publish (verification not needed for these scopes)
+- [ ] **(once)** Google Cloud Console > APIs & Services > OAuth consent screen: External, app name Icos, support email, privacy policy URL, scopes `email`, `profile`, `openid`; publish (verification not needed for these scopes)
 - [ ] **(once)** Credentials > Create OAuth client ID:
   - **Web application** (used by Supabase and as Android `serverClientId`): authorised redirect URI `https://<PROJECT_REF>.supabase.co/auth/v1/callback` -> `GOOGLE_WEB_CLIENT_ID` (+ secret for Supabase)
-  - **Android**: package `com.zlynkr.zlynkr`, SHA-1 of **both** the upload key (`keytool -list -v -keystore ~/zlynkr-upload-keystore.jks -alias upload`) and the Play App Signing key (Play Console > App signing) — create one client per fingerprint
-  - **iOS**: bundle ID `com.zlynkr.zlynkr` -> `GOOGLE_IOS_CLIENT_ID`
+  - **Android**: package `com.icos.game`, SHA-1 of **both** the upload key (`keytool -list -v -keystore ~/icos-upload-keystore.jks -alias upload`) and the Play App Signing key (Play Console > App signing) — create one client per fingerprint
+  - **iOS**: bundle ID `com.icos.game` -> `GOOGLE_IOS_CLIENT_ID`
 - [ ] Put the two IDs into `.env.production` locally and GitHub secrets `GOOGLE_WEB_CLIENT_ID`, `GOOGLE_IOS_CLIENT_ID`
 
 ---
@@ -217,8 +217,8 @@ The `docs/` folder is a static site (landing page, privacy policy, terms, `.well
 Skip this section entirely if you launch without Firebase; leave the `FIREBASE_*` secrets empty.
 
 - [ ] **(once)** https://console.firebase.google.com > Add project (you can reuse the Google Cloud project from step 5 so the OAuth clients are shared)
-- [ ] **(once)** Add **Android app** `com.zlynkr.zlynkr` with both SHA-1/SHA-256 fingerprints; download `google-services.json` -> `android/app/google-services.json` locally (git-ignored) and secret `GOOGLE_SERVICES_JSON_BASE64`
-- [ ] **(once)** Add **iOS app** `com.zlynkr.zlynkr`; download `GoogleService-Info.plist` -> `ios/Runner/GoogleService-Info.plist` locally (git-ignored, must also be added to the Runner target in Xcode if you build locally) and secret `GOOGLE_SERVICE_INFO_PLIST_BASE64`
+- [ ] **(once)** Add **Android app** `com.icos.game` with both SHA-1/SHA-256 fingerprints; download `google-services.json` -> `android/app/google-services.json` locally (git-ignored) and secret `GOOGLE_SERVICES_JSON_BASE64`
+- [ ] **(once)** Add **iOS app** `com.icos.game`; download `GoogleService-Info.plist` -> `ios/Runner/GoogleService-Info.plist` locally (git-ignored, must also be added to the Runner target in Xcode if you build locally) and secret `GOOGLE_SERVICE_INFO_PLIST_BASE64`
 - [ ] **(once)** Copy Project settings values into `.env.production` / secrets: `FIREBASE_PROJECT_ID`, `FIREBASE_MESSAGING_SENDER_ID`, `FIREBASE_STORAGE_BUCKET`, `FIREBASE_ANDROID_API_KEY`, `FIREBASE_ANDROID_APP_ID`, `FIREBASE_IOS_API_KEY`, `FIREBASE_IOS_APP_ID`
 - [ ] **(once)** Cloud Messaging > Apple app configuration > upload the APNs key from step 3
 - [ ] **(once)** Crashlytics > enable for both apps (first crash report activates the dashboard)
@@ -248,8 +248,8 @@ cd ios && bundle exec fastlane beta
 
 Test deep links on a device:
 ```bash
-adb shell am start -a android.intent.action.VIEW -d "https://zlynkr.app/join/ABC123" com.zlynkr.zlynkr
-xcrun simctl openurl booted "https://zlynkr.app/join/ABC123"
+adb shell am start -a android.intent.action.VIEW -d "https://icos.app/join/ABC123" com.icos.game
+xcrun simctl openurl booted "https://icos.app/join/ABC123"
 ```
 
 ---
@@ -275,7 +275,7 @@ Repo > Settings > Secrets and variables > Actions. Every secret referenced by a 
 | `FIREBASE_IOS_APP_ID` | deploy-android, deploy-ios (optional) | `GoogleService-Info.plist` > `GOOGLE_APP_ID` |
 | `GOOGLE_SERVICES_JSON_BASE64` | deploy-android (optional) | `base64 -i google-services.json` |
 | `GOOGLE_SERVICE_INFO_PLIST_BASE64` | deploy-ios (optional) | `base64 -i GoogleService-Info.plist` |
-| `ANDROID_KEYSTORE_BASE64` | deploy-android | `base64 -i zlynkr-upload-keystore.jks` |
+| `ANDROID_KEYSTORE_BASE64` | deploy-android | `base64 -i icos-upload-keystore.jks` |
 | `ANDROID_KEYSTORE_PASSWORD` | deploy-android | keystore store password |
 | `ANDROID_KEY_PASSWORD` | deploy-android | keystore key password |
 | `ANDROID_KEY_ALIAS` | deploy-android | `upload` (defaults to `upload` if unset) |

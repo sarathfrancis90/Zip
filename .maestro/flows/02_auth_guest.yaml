@@ -1,6 +1,6 @@
 # Flow 02: Anonymous Auto-Login
 # Verifies the app auto-signs in anonymously after onboarding.
-appId: com.zlynkr.zlynkr
+appId: com.icos.game
 
 ---
 
@@ -13,7 +13,7 @@ appId: com.zlynkr.zlynkr
 - waitForAnimationToEnd
 
 # Should be on home screen now (auto-signed in as anonymous)
-- assertVisible: "Zlynkr"
+- assertVisible: "Icos"
 - assertVisible: "Today's Puzzle"
 - assertVisible: "Play"
 - takeScreenshot: 02_auth/home_auto_signed_in

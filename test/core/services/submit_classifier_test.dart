@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:zlynkr/core/services/submit_classifier.dart';
+import 'package:icos/core/services/submit_classifier.dart';
 
 void main() {
   group('classifySubmitResponse', () {

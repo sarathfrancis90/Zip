@@ -203,7 +203,7 @@ abstract final class NotificationService {
       await _plugin.cancel(id: dailyReminderId);
       await _plugin.zonedSchedule(
         id: dailyReminderId,
-        title: 'Today\'s Zlynkr is ready',
+        title: 'Today\'s Icos is ready',
         body: 'A fresh path awaits. Keep your streak alive!',
         scheduledDate: nextInstanceOf(time),
         notificationDetails: const NotificationDetails(
